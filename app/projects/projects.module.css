@@ -1,0 +1,18 @@
+.project-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
+}
+
+.project-image {
+  width: 40%;
+  height: auto;
+  /* object-fit: fit; */
+}
+
+@media screen and (min-width: 480px) {
+  .project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
