@@ -1,4 +1,4 @@
-import Card from "@components/Card/Card";
+import Card from "@/src/components/Card/Card";
 import Image from "next/image";
 
 const Projects = () => {

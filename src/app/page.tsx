@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Card from "@/components/Card/Card";
+import Card from "@/src/components/Card/Card";
 import { Inter } from "next/font/google";
 import styles from "./page.module.css";
 
@@ -19,7 +19,7 @@ const Home = () => {
           View Profile --&gt;
         </Link>
 
-        <h2>Select Projects</h2>
+        <h2 className={styles.h2}>Select Projects</h2>
         <Card>
           <h1>{/* {{ project.name }} */}</h1>
 
