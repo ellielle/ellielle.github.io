@@ -12,3 +12,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+// TODO delete if not needed
+// .grid-container {
+//   display: flex;
+//   flex-direction: row;
+//   /* grid-auto-flow: row dense; */
+//   min-height: 100vh;
+// }
