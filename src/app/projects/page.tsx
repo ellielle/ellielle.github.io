@@ -1,38 +1,21 @@
-import Card from "@/src/components/Card/Card";
+import Card from "@components/Card";
 import Image from "next/image";
+import { projectList } from "@/src/helpers/skillset";
+
+const projects = projectList.map((project) => {
+  return (
+    <Card project={project}>
+      <Image src={project.image} alt={project.imageAlt} width={160} height={90} />
+    </Card>
+  );
+});
 
 const Projects = () => {
   return (
     <main>
       <h1>Some things I've built</h1>
-      {/* <div class="project-container">
-      <Card>
-        <template #text>
-          <a
-            href="https://vinceotl.netlify.app"
-            target="_blank"
-            rel="noopener"
-            no-rel
-            class="project-image">
-            <img src="../assets/images/otl.webp" alt="VinceOTL - A streamer's website" />
-          </a>
-        </template>
-      </Card>
-      <Card>
-        <template #text>
-          <a
-            href="https://www.historicberkeley.org/"
-            target="_blank"
-            rel="noopener"
-            no-rel
-            class="project-image">
-            <img
-              src="../assets/images/bchs.webp"
-              alt="Berkeley County West Virginia Historical Society" />
-          </a>
-        </template>
-      </Card>
-    </div> */}
+      {/* TODO use a different style card/container? */}
+      <div className="project-container">{projects}</div>
     </main>
   );
 };
