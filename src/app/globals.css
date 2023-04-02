@@ -1,3 +1,6 @@
+@tailwindcss base;
+@tailwindcss components;
+@tailwindcss utilities;
 /* TODO all of the global css */
 
 :root {
