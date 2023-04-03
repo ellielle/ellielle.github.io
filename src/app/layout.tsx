@@ -9,17 +9,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body className="flex min-h-100vh mt-[4rem]">
         <Header />
         {children}
       </body>
     </html>
   );
 }
-// TODO delete if not needed
-// .grid-container {
-//   display: flex;
-//   flex-direction: row;
-//   /* grid-auto-flow: row dense; */
-//   min-height: 100vh;
-// }

@@ -3,19 +3,20 @@ import styles from "./Header.module.css";
 
 const Header = () => {
   return (
-    <header>
+    <header className={styles["header-nav"]}>
       <nav className={styles.nav}>
         <Link href="/" className={styles.navItem}>
-          <span className={styles.navText}>Home</span>
+          <span className={styles["nav-text"]}>Home</span>
         </Link>
-        <Link href="/about" className={styles.navItem}>
-          <span className={styles.navText}>About</span>
+        <Link href="/about" className={styles["nav-item"]}>
+          <span className={styles["nav-text"]}>About</span>
         </Link>
-        <Link href="/projects" className={styles.navItem}>
-          <span className={styles.navText}>Projects</span>
+        <Link href="/projects" className={styles["nav-item"]} 
+        >
+          <span className={styles["nav-text"]}>Projects</span>
         </Link>
-        <Link href="/contact" className={styles.navItem}>
-          <span className={styles.navText}>Contact</span>
+        <Link href="/contact" className={styles["nav-item"]}>
+          <span className={styles["nav-text"]}>Contact</span>
         </Link>
       </nav>
     </header>

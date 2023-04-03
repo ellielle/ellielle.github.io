@@ -11,7 +11,14 @@ const list = projectList.map((project) => {
   return (
     project.select && (
       <Card key={project.name} project={project}>
-        <Image src={project.image} alt={project.imageAlt} width={160} height={90} priority />
+        <Image
+          src={project.image}
+          alt={project.imageAlt}
+          width={160}
+          height={90}
+          style={{ width: "20%", height: "auto" }}
+          priority
+        />
       </Card>
     )
   );
@@ -19,13 +26,14 @@ const list = projectList.map((project) => {
 
 const Home = () => {
   return (
-    <main className={styles.main}>
+    <main className={[styles.main, inter.className].join(" ")}>
       <div className={styles.description}>
-        <h1>Noelle L'Amour</h1>
+        <h1 className="font-3xl">Noelle L'Amour</h1>
         <div>
           {/* TODO finish intro */}
           <p>Full Stack Web Developer</p>
         </div>
+
         <Link href="/about" className={styles.moreAbout}>
           View Profile --&gt;
         </Link>
