@@ -3,7 +3,6 @@ import Link from "next/link";
 import Card from "@components/Card";
 import { Inter } from "next/font/google";
 import { projectList } from "@helpers/skillset";
-import styles from "./page.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,8 +13,8 @@ const list = projectList.map((project) => {
         <Image
           src={project.image}
           alt={project.imageAlt}
-          width={160}
-          height={90}
+          width={1794}
+          height={946}
           style={{ width: "20%", height: "auto" }}
           priority
         />
@@ -26,20 +25,20 @@ const list = projectList.map((project) => {
 
 const Home = () => {
   return (
-    <main className={[styles.main, inter.className].join(" ")}>
-      <div className={styles.description}>
-        <h1 className="font-3xl">Noelle L'Amour</h1>
-        <div>
+    <main className={[inter.className].join(" ")}>
+      <div className="">
+        <h1 className="text-4xl">Noelle L'Amour</h1>
+        <div className="mb-10">
           {/* TODO finish intro */}
           <p>Full Stack Web Developer</p>
         </div>
 
-        <Link href="/about" className={styles.moreAbout}>
+        <Link href="/about" className="">
           View Profile --&gt;
         </Link>
 
-        <h2 className={styles.h2}>Select Projects</h2>
-        {list}
+        <h2 className="">Select Projects</h2>
+        <section>{list}</section>
       </div>
     </main>
   );

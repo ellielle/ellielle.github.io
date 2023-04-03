@@ -1,9 +1,13 @@
+import { StaticImageData } from "next/image";
+import otl from "../../public/otl.png";
+import bchs from "../../public/bchs.png";
+
 interface Project {
   name: string;
   description: string;
   stack: string[];
   url: string;
-  image: string;
+  image: StaticImageData | string;
   imageAlt: string;
   select?: boolean;
 }
@@ -15,7 +19,7 @@ const projectList: Project[] = [
     description: "Easy framework starter templates.",
     stack: ["Node.js", "Vue.js", "Nuxt", "React", "Next.js"],
     url: "https://github.com/ellielle/",
-    image: "/../public/otl.webp",
+    image: otl,
     imageAlt: "Templio's github page",
     select: true,
   },
@@ -24,7 +28,7 @@ const projectList: Project[] = [
     description: "A web app for a Twitch streamer to track his backlog progress.",
     stack: ["Nuxt", "Vue.js", "Vuetify", "Netlify", "FaunaDB"],
     url: "https://vinceotl.netlify.app",
-    image: "/../public/otl.webp",
+    image: otl,
     imageAlt: "VinceOTL's front page",
     select: true,
   },
@@ -33,7 +37,7 @@ const projectList: Project[] = [
     description: "Historical Society for Berkeley County, WV.",
     stack: ["WordPress"],
     url: "https://www.historicberkeley.org/",
-    image: "/../public/bchs.webp",
+    image: bchs,
     imageAlt: "Berkeley County Historical Society's website.",
     select: true,
   },
