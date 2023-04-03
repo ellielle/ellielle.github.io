@@ -4,16 +4,16 @@
 /* TODO all of the global css */
 
 :root {
-  --max-width: 1100px;
+  --max-width: 100cqw;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono",
     "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono",
     "Courier New", monospace;
 
-  --bg-primary-hsl: hsl(255, 6%, 13%);
-  --bg-secondary-hsl: hsl(255, 6%, 13%);
+  --bg-primary-hsl: hsl(0, 0%, 100%);
+  --bg-secondary-hsl: hsl(255, 6%, 49%);
   --link-hover: hsl(153, 47%, 49%);
-  --text-primary: hsl(0, 0%, 95%);
+  --text-primary: hsl(0, 2%, 12%);
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -97,22 +97,19 @@
 
 html,
 body {
-  /* TODO max width */
-  max-width: 100cqw;
-  /* max-width: 100vw; */
+  max-width: var(--max-width);
   overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-primary-hsl);
+  color: var(--text-primary);
 }
 
 html {
   line-height: 1.5;
   scroll-behavior: smooth;
   font-size: 100%;
-}
-
-body {
-  /* color: rgb(var(--foreground-rgb)); */
-  /* background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
-    rgb(var(--background-start-rgb)); */
 }
 
 img,
@@ -135,11 +132,11 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
-}
+} */
 
 @media (hover: hover) {
   a:hover,
