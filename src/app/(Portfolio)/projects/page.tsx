@@ -10,7 +10,7 @@ const projects = projectList.map((project) => {
         alt={project.imageAlt}
         width={1794}
         height={946}
-        className="w-[50%] h-auto"
+        className="justify-self-center w-[50%] h-auto md:w-[20%]"
         priority
       />
     </Card>

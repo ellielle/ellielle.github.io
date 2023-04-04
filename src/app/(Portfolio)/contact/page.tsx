@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <main>
-      <h1 className="text-9xl text-yellow-400 mt-5">Repurpose thisp anel and move contact to header/hamburger?</h1>
+      <h1 className="text-3xl text-yellow-300">Repurpose content into something else?</h1>
     </main>
   );
 }
