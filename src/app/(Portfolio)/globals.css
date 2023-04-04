@@ -6,11 +6,10 @@
 :root {
   --max-width: 100cqw;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono",
-    "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono",
-    "Courier New", monospace;
+  --font-mono: "Fira Code", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace",
+    "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-  --font-sans: "REPLACE ME";
+  --font-sans: Inter, "Trebuchet MS", Helvetica, Verdana, sans-serif;
 
   --bg-primary-hsl: hsl(0, 0%, 100%);
   --bg-secondary-hsl: hsl(255, 6%, 49%);

@@ -1,30 +1,3 @@
-.header-nav {
-  position: fixed;
-  display: grid;
-  align-content: center;
-  width: 100%;
-  top: 0;
-  left: 0;
-  height: 3em;
-  background-color: var(--bg-primary-hsl);
-  box-shadow: 0 0 0.5rem 0.2rem hsla(0, 0%, 0%, 0.4);
-  z-index: 5;
-}
-
-/* .nav {
-  height: 100%;
-  width: 80%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  justify-self: center;
-} */
-
-.nav-text {
-  font-size: 1.4rem;
-}
-
-
 a.router-link-active > span,
 a.router-link-active > div {
   color: hsl(155, 51%, 48%);
