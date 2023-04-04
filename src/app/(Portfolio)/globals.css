@@ -10,6 +10,8 @@
     "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono",
     "Courier New", monospace;
 
+  --font-sans: "REPLACE ME";
+
   --bg-primary-hsl: hsl(0, 0%, 100%);
   --bg-secondary-hsl: hsl(255, 6%, 49%);
   --link-hover: hsl(153, 47%, 49%);
