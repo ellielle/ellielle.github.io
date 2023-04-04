@@ -1,21 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* TODO all of the global css */
+
+@layer base {
+  .gradient-text {
+    background: linear-gradient(to right, hsl(286, 75%, 47%), hsl(308, 75%, 47%) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+
+/* TODO kill most of the global css and move to tailwind's various nooks and crannies */
 
 :root {
-  --max-width: 100cqw;
-  --max-height: 100cqh;
-  --border-radius: 12px;
   --font-mono: "Fira Code", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace",
     "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --font-sans: Inter, "Trebuchet MS", Helvetica, Verdana, sans-serif;
 
-  --bg-primary-hsl: hsl(0, 0%, 100%);
-  --bg-secondary-hsl: hsl(255, 6%, 49%);
-  --link-hover: hsl(153, 47%, 49%);
-  --text-primary: hsl(0, 2%, 12%);
+  --bg-primary-hsl: 0deg, 0%, 100%;
+  --bg-secondary-hsl: 255deg, 6%, 49%;
+  --link-hover-hsl: 153deg, 47%, 49%;
+  --text-primary-hsl: 0deg, 2%, 12%;
+  --text-gradient: 0;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -47,10 +55,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-primary-hsl: hsl(255, 6%, 13%);
-    --bg-secondary-hsl: hsl(255, 6%, 13%);
-    --link-hover: hsl(153, 47%, 49%);
-    --text-primary: hsl(0, 0%, 95%);
+    --bg-primary-hsl: 255deg, 6%, 13%;
+    --bg-secondary-hsl: 255deg, 6%, 13%;
+    --link-hover-hsl: 153, 47%, 49%;
+    --text-primary-hsl: 0deg, 0%, 95%;
+    --text-gradient: linear-gradient(to right, hsl(286, 75%, 47%), hsl(308, 75%, 47%));
 
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
@@ -109,10 +118,9 @@ html {
 }
 
 body {
-  max-width: var(--max-width);
-  min-height: var(--max-height);
-  background-color: var(--bg-primary-hsl);
-  color: var(--text-primary);
+  min-height: 100cql;
+  background-color: hsl(var(--bg-primary-hsl));
+  color: hsl(var(--text-primary-hsl));
   padding: 1rem;
 }
 
@@ -145,6 +153,7 @@ a {
 @media (hover: hover) {
   a:hover,
   a:focus {
-    color: hsl(153, 47%, 49%);
+    color: hsl(var(--link-hover-hsl));
   }
 }
+

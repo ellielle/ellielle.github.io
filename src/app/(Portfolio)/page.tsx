@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <main className={inter.className}>
       <div>
-        <h1 className="text-4xl">Noelle L'Amour</h1>
+        <h1 className="text-4xl gradient-text">Noelle L'Amour 👋</h1>
         <div className="mb-10">
           {/* TODO finish intro */}
           <p>Full Stack Web Developer</p>
