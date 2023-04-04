@@ -15,7 +15,7 @@ const list = projectList.map((project) => {
           alt={project.imageAlt}
           width={1794}
           height={946}
-          style={{ width: "20%", height: "auto" }}
+          className="w-[50%] h-auto"
           priority
         />
       </Card>
@@ -25,8 +25,8 @@ const list = projectList.map((project) => {
 
 const Home = () => {
   return (
-    <main className={[inter.className].join(" ")}>
-      <div className="">
+    <main className={inter.className}>
+      <div>
         <h1 className="text-4xl">Noelle L'Amour</h1>
         <div className="mb-10">
           {/* TODO finish intro */}
@@ -38,7 +38,9 @@ const Home = () => {
         </Link>
 
         <h2 className="">Select Projects</h2>
-        <section>{list}</section>
+        <section className="pt-8">
+          <div className="grid gap-4 md:grid-cols-2_w-[80%]">{list}</div>
+        </section>
       </div>
     </main>
   );

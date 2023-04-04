@@ -22,7 +22,7 @@ const Projects = () => {
     <main>
       <h1>Some things I've built</h1>
       {/* TODO use a different style card/container? */}
-      <div className="grid grid-cols-1 md:grid grid-cols-3">{projects}</div>
+      <div className="pt-8 grid gap-4">{projects}</div>
     </main>
   );
 };

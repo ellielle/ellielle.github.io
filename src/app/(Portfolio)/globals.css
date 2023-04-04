@@ -5,6 +5,7 @@
 
 :root {
   --max-width: 100cqw;
+  --max-height: 100cqh;
   --border-radius: 12px;
   --font-mono: "Fira Code", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace",
     "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
@@ -98,19 +99,21 @@
 
 html,
 body {
-  max-width: var(--max-width);
   overflow-x: hidden;
-}
-
-body {
-  background-color: var(--bg-primary-hsl);
-  color: var(--text-primary);
 }
 
 html {
   line-height: 1.5;
   scroll-behavior: smooth;
   font-size: 100%;
+}
+
+body {
+  max-width: var(--max-width);
+  min-height: var(--max-height);
+  background-color: var(--bg-primary-hsl);
+  color: var(--text-primary);
+  padding: 1rem;
 }
 
 img,
