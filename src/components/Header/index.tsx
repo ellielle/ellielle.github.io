@@ -1,11 +1,11 @@
 import Link from "next/link";
-import styles from "./Header.module.css";
 
 const menu = [
   ["/", "Home"],
   ["/about", "About"],
   ["/projects", "Projects"],
-  ["/contact", "Contact"],
+  // ["/redact", "[REDACTED]"],
+  // ["/redact", "[REDACTED]"],
 ];
 
 const navigationMenu = menu.map(([url, text]) => {
