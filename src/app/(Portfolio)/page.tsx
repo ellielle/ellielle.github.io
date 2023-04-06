@@ -1,32 +1,14 @@
-import Image from "next/image";
 import Link from "next/link";
-import Card from "@components/Card";
+import { useProjectList } from "@hooks/useProjectList";
 import { Inter } from "next/font/google";
-import { projectList } from "@helpers/skillset";
 
 const inter = Inter({ subsets: ["latin"] });
+const projectList = useProjectList();
 
-const list = projectList.map((project) => {
-  return (
-    project.select && (
-      <Card key={project.name} project={project}>
-        <Image
-          src={project.image}
-          alt={project.imageAlt}
-          width={1794}
-          height={946}
-          className="justify-self-center w-[50%] h-auto md:w-[20%]"
-          priority
-        />
-      </Card>
-    )
-  );
-});
-
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <main className={inter.className}>
-      <div>
+      <div className="text-center md:text-left ">
         <h1 className="text-4xl gradient-text">Noelle L'Amour 👋</h1>
         <div className="mb-10">
           {/* TODO finish intro */}
@@ -39,7 +21,9 @@ const Home = () => {
 
         <h2 className="">Select Projects</h2>
         <section className="pt-8">
-          <div className="grid gap-4 md:grid-cols-2_w-[80%]">{list}</div>
+          <div className="grid gap-4 md:grid-cols-2">
+            
+          </div>
         </section>
       </div>
     </main>

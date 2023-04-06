@@ -1,6 +1,9 @@
-import { Project } from "@helpers/skillset";
+import { Project } from "@utils/skillset";
 
-const Card = ({ children, project }: { children: React.ReactNode; project: Partial<Project> }) => {
+const Card: React.FC<{ children: React.ReactNode; project: Partial<Project> }> = ({
+  children,
+  project,
+}) => {
   return (
     <div className="card-container">
       <div className="text-green-400">{project.name}</div>

@@ -9,7 +9,8 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      {/* TODO can't get width to stay consistent and responsive */}
+      <body className="max-w-[1280px] mx-auto">
         <Header />
         <div className="mt-[4rem]">{children}</div>
       </body>

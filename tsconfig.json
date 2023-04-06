@@ -24,7 +24,8 @@
       "@app/*": ["./src/app/(Portfolio)/*"],
       "@blog/*": ["./src/app/(Blog)/*"],
       "@components/*": ["./src/components/*"],
-      "@helpers/*": ["./src/helpers/*"]
+      "@utils/*": ["./src/utils/*"],
+      "@hooks/*": ["./src/hooks/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "tailwind.config.js"],

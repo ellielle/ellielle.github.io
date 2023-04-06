@@ -1,4 +1,4 @@
-const About = () => {
+const About: React.FC = () => {
   return (
     <main>
       <h2>Hi, I'm Noelle.</h2>

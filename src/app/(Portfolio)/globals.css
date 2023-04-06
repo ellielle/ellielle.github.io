@@ -4,7 +4,7 @@
 
 @layer base {
   .gradient-text {
-    background: linear-gradient(to right, hsl(286, 75%, 47%), hsl(308, 75%, 47%) 50%);
+    background: var(--text-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -32,7 +32,7 @@
   --bg-secondary-hsl: 255deg, 6%, 49%;
   --link-hover-hsl: 153deg, 47%, 49%;
   --text-primary-hsl: 0deg, 2%, 12%;
-  --text-gradient: 0;
+  --text-gradient: linear-gradient(to right, hsl(278, 74%, 54%), hsl(49, 98%, 51%) 50%);
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -68,8 +68,8 @@
     --bg-secondary-hsl: 255deg, 6%, 13%;
     --link-hover-hsl: 153, 47%, 49%;
     --text-primary-hsl: 0deg, 0%, 95%;
-    --text-gradient: linear-gradient(to right, hsl(286, 75%, 47%), hsl(308, 75%, 47%));
-
+    --text-gradient: linear-gradient(to right, hsl(278, 74%, 54%), hsl(197, 75%, 47%) 50%);
+    
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
       to bottom right,

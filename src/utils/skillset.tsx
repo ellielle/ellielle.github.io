@@ -7,9 +7,9 @@ interface Project {
   description: string;
   stack: string[];
   url: string;
-  image: StaticImageData | string;
+  image: StaticImageData;
   imageAlt: string;
-  select?: boolean;
+  select: boolean;
 }
 
 const projectList: Project[] = [
