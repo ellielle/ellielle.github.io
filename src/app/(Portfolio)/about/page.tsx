@@ -1,8 +1,10 @@
 const About: React.FC = () => {
   return (
     <main>
-      <h2>Hi, I'm Noelle.</h2>
-      <p>I've been working as a freelance web developer since early 2021.</p>
+      <div className="text-left">
+        <h1>Hi, I'm Noelle L&#39;Amour.</h1>
+        <p></p>
+      </div>
     </main>
   );
 };

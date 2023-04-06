@@ -8,6 +8,10 @@ const menu: Array<[string, string]> = [
   // ["/redact", "[REDACTED]"],
 ];
 
+// TODO refactor nav into a smaller section, go hamburger for small screen probably
+// TODO then put a "home" link with a logo in left, and contacts by logo upper right
+
+// TODO fix header font now that you're using Next
 const navigationMenu = menu.map(([url, text]) => {
   return (
     <Link href={url} key={url}>

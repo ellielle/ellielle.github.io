@@ -4,6 +4,7 @@
 /node_modules
 /.pnpsle
 .pnp.js
+scratch.css
 
 # testing
 /coverage

@@ -20,7 +20,7 @@ const ProjectList: React.FC<{ filterSelected: boolean }> = ({ filterSelected = f
           alt={project.imageAlt}
           width={1794}
           height={946}
-          className="justify-self-center w-[50%] h-auto md:w-[20%]"
+          className="justify-items-center h-auto w-max-[30%]"
           priority
         />
       </Card>

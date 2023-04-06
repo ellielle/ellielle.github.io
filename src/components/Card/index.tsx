@@ -6,8 +6,8 @@ const Card: React.FC<{ children: React.ReactNode; project: Partial<Project> }> =
 }) => {
   return (
     <div className="card-container">
+      <div className="">{children}</div>
       <div className="text-green-400">{project.name}</div>
-      <div className="py-4 grid">{children}</div>
       <div>{project.description}</div>
       <div>{project.stack}</div>
     </div>

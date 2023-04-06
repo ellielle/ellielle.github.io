@@ -1,5 +1,9 @@
 import Header from "@components/Header";
 import "./globals.css";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--inter-font" });
+export { inter };
 
 export const metadata = {
   title: "Noelle L'Amour",
@@ -17,4 +21,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
-0
+0;

@@ -11,9 +11,9 @@
 
   .card-container {
     display: grid;
-    width: minmax(min-content, max-content);
+    width: fit-content;
     text-align: center;
-    padding: 1rem;
+    padding: 0.5rem;
     border: solid 1px hsl(231, 15%, 18%);
     border-radius: 0.5rem;
     box-shadow: 0 0 0.5rem hsl(34, 51%, 43%);
@@ -26,7 +26,7 @@
   --font-mono: "Fira Code", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace",
     "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-  --font-sans: Inter, "Trebuchet MS", Helvetica, Verdana, sans-serif;
+  --font-sans: Inter, "Trebuchet MS", -system-ui, Helvetica, Verdana, sans-serif;
 
   --bg-primary-hsl: 0deg, 0%, 100%;
   --bg-secondary-hsl: 255deg, 6%, 49%;
@@ -68,8 +68,8 @@
     --bg-secondary-hsl: 255deg, 6%, 13%;
     --link-hover-hsl: 153, 47%, 49%;
     --text-primary-hsl: 0deg, 0%, 95%;
-    --text-gradient: linear-gradient(to right, hsl(278, 74%, 54%), hsl(197, 75%, 47%) 50%);
-    
+    --text-gradient: linear-gradient(to right, hsl(278, 74%, 54%), hsl(197, 75%, 47%) 40%);
+
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
       to bottom right,
@@ -122,7 +122,6 @@ body {
 
 html {
   line-height: 1.5;
-  scroll-behavior: smooth;
   font-size: 100%;
 }
 
@@ -163,5 +162,17 @@ a {
   a:hover,
   a:focus {
     color: hsl(var(--link-hover-hsl));
+    /* text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff,
+      0 0 2px hsl(var(--link-hover-hsl)), 0 0 4px hsl(var(--link-hover-hsl)),
+      0 0 8px hsl(var(--link-hover-hsl)), 0 0 10px hsl(var(--link-hover-hsl));
+      */
+  }
+}
+
+/* Some people hate this feature */
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
   }
 }
