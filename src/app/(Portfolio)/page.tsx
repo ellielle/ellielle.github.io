@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { inter } from "./layout";
-import { Vue, Nuxt, React, Next, TypeScript, Netlify, Vercel } from "@components/Logos";
+import { Vue, Nuxt, React, Next, TypeScript, Netlify, Vercel, Email } from "@components/Logos";
 
 const Home: React.FC = () => {
   return (
