@@ -18,6 +18,11 @@
     border-radius: 0.5rem;
     box-shadow: 0 0 0.5rem hsl(34, 51%, 43%);
   }
+
+  .svg-logo {
+    height: 4rem;
+    width: auto;
+  }
 }
 
 /* TODO kill most of the global css and move to tailwind's various nooks and crannies */
@@ -126,7 +131,7 @@ html {
 }
 
 body {
-  min-height: 100cql;
+  min-height: 100vh;
   background-color: hsl(var(--bg-primary-hsl));
   color: hsl(var(--text-primary-hsl));
   padding: 1rem;
