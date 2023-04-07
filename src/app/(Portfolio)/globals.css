@@ -22,6 +22,7 @@
   .svg-logo {
     height: 4rem;
     width: auto;
+    fill: hsl(var(--svg-fill-hsl));
   }
 }
 
@@ -37,6 +38,7 @@
   --bg-secondary-hsl: 255deg, 6%, 49%;
   --link-hover-hsl: 153deg, 47%, 49%;
   --text-primary-hsl: 0deg, 2%, 12%;
+  --svg-fill-hsl: 0deg, 2%, 12%;
   --text-gradient: linear-gradient(to right, hsl(278, 74%, 54%), hsl(49, 98%, 51%) 50%);
 
   --primary-glow: conic-gradient(
@@ -73,6 +75,7 @@
     --bg-secondary-hsl: 255deg, 6%, 13%;
     --link-hover-hsl: 153, 47%, 49%;
     --text-primary-hsl: 0deg, 0%, 95%;
+    --svg-fill-hsl: 0deg, 0%, 85%;
     --text-gradient: linear-gradient(to right, hsl(278, 74%, 54%), hsl(197, 75%, 47%) 40%);
 
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
