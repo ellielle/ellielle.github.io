@@ -21,9 +21,9 @@ const Home: React.FC = () => {
         </Link>
         {/* TODO  */}
 
-        <h2 className="mt-10 text-center">Some of my favorite spells to cast</h2>
+        <h2 className="mt-10 text-center">Some of my favorite schools of magick</h2>
         <section className="mt-8">
-          {/* TODO find open source scroll you can use as a background card image */}
+          {/* CSS glow effect, maybe use a spell circle svg and make it transparent */}
         </section>
       </div>
     </main>
