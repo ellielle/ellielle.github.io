@@ -1,5 +1,3 @@
-import React from "react";
-
 const MagicCircle: React.FC = () => {
   // TODO edit circle's styling and animation
   // TODO trying passing the logo element in as a child and using this as wrapper
