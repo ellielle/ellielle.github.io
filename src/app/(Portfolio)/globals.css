@@ -24,6 +24,23 @@
     width: auto;
     fill: hsl(var(--svg-fill-hsl));
   }
+
+  .infernal {
+    /* CSS for a demonic animated green glowing text, don't use any variables */
+    color: #00ff00;
+    animation: glow 1s ease-out infinite alternate;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 0.3rem #00ff00, 0 0 0.6rem #00ff00;
+      }
+      to {
+        text-shadow: 0 0 0.3rem #00ff00, 0 0 0.6rem #00ff00, 0 0 1rem #00ff00;
+      }
+    }
+  }
 }
 
 /* TODO kill most of the global css and move to tailwind's various nooks and crannies */
