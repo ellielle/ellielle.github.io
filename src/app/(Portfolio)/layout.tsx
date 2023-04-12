@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       {/* TODO can't get width to stay consistent and responsive */}
-      <body className={[inter.className, "max-w-[1280px] mx-auto"].join(" ")}>
+      <body className={[inter.className, "max-w-[1280px] mx-auto synth-grid"].join(" ")}>
         <Header />
         <div className="mt-[4rem]">{children}</div>
       </body>

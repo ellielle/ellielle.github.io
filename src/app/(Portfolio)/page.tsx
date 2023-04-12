@@ -1,7 +1,6 @@
 // import Link from "next/link";
 import { Fragment } from "react";
 import { techStacks } from "@components/Logos";
-import MagicCircle from "@components/MagicCircle";
 
 const Home: React.FC = () => {
   return (
@@ -20,16 +19,9 @@ const Home: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className="flex justify-center items-center">
-          <MagicCircle />
-        </div>
+        <div className="flex justify-center items-center"></div>
       </section>
 
-      {/* TODO on the chopping block */}
-      {/* <Link href="/about" className="text-xl">
-          Read My Tale --&gt;
-        </Link> */}
-      {/* TODO  */}
       <div>
         <h2 className="mt-20 text-center text-xl">Some of my favorite schools of magick</h2>
         <section className="mt-[5.5rem] grid grid-cols-2 grid-flow-row gap-5 place-content-center justify-items-center md:grid-cols-3 w-[60%] mx-auto gap-10 lg:grid-cols-[repeat(auto-fill,minmax(20%,100px))]">

@@ -26,9 +26,15 @@
   }
 
   .infernal {
-    /* CSS for a demonic animated green glowing text, don't use any variables */
     color: #00ff00;
     animation: glow 1s ease-out infinite alternate;
+  }
+
+  .synth-grid {
+    /* background-color: ; */
+    background-image: linear-gradient(hsla(330, 100%, 71%, 0.6), 0.5rem, transparent 0.5rem),
+      linear-gradient(90deg, hsla(330, 100%, 71%, 0.6), 0.5rem, transparent 0.5rem);
+      background-size: 5rem 5rem;
   }
 
   @media (prefers-reduced-motion: no-preference) {

@@ -62,6 +62,7 @@ const skillSet = [
   { name: "Jamstack", url: "" },
   { name: "Netlify", url: "" },
   { name: "Vercel", url: "" },
+  { name: "Prisma", url: "" },
 ];
 
 export { skillSet, projectList };

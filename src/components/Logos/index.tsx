@@ -11,12 +11,12 @@ import { LinkedIn } from "./Social/LinkedIn";
 import { Twitter } from "./Social/Twitter";
 import { Github } from "./Social/Github";
 export const techStacks = [
-  <Vue />,
-  <Next />,
-  <Nuxt />,
-  <React />,
-  <Netlify />,
-  <Vercel />,
   <TypeScript />,
+  <Vue />,
+  <Nuxt />,
+  <Netlify />,
+  <React />,
+  <Next />,
+  <Vercel />,
 ];
 export const socialMedia = { Discord, Email, LinkedIn, Twitter, Github };
