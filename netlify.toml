@@ -1,0 +1,14 @@
+[build.environment]
+  NODE_VERSION = "18"
+
+[build]
+  publish = ".next"
+  command = "pnpm run build"
+
+[functions]
+  directory = "functions/"
+
+[dev]
+  command = "pnpm dev"
+  port = "8888"
+  publish = ".next"
