@@ -1,10 +1,11 @@
+import Link from "next/link";
 import { Fragment } from "react";
-import Header from "@/src/components/Header";
 import { techStacks } from "@components/Logos";
+import { ShortBlurb } from "./about/page";
 
 const Home: React.FC = () => {
   return (
-    <main>
+    <main className="px-4">
       <section className="text-left grid grid-cols-2">
         <div>
           <h1 className="text-3xl">
@@ -28,11 +29,16 @@ const Home: React.FC = () => {
       <div>
         <h2 className="mt-20 text-center text-xl">Some of my favorite schools of magick</h2>
         <section className="mt-[5.5rem] grid grid-cols-2 grid-flow-row gap-5 place-content-center justify-items-center md:grid-cols-3 w-[60%] mx-auto gap-10 lg:grid-cols-[repeat(auto-fill,minmax(20%,100px))]">
-          {/* CSS glow effect, maybe use a spell circle svg and make it transparent */}
-          {/* these components probably need to become an array through mapping */}
           {techStacks.map((stack) => (
-            <>{stack}</>
+            <Fragment key={Math.random()}>{stack}</Fragment>
           ))}
+        </section>
+      </div>
+
+      <div>
+        <section className="text-xl last:pb-10 text-center">
+          <ShortBlurb>{""}</ShortBlurb>
+          <Link href="/about">More About Me --&#62;</Link>
         </section>
       </div>
     </main>

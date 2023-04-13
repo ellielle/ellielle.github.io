@@ -12,7 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="bg-animation">
       {/* TODO can't get width to stay consistent and responsive */}
-      <body className={[inter.className, "max-w-[1280px] mx-auto"].join(" ")}>
+      <body className={[inter.className, "sm:mx-[5%] md:max-w-[1280px]"].join(" ")}>
         <div>{children}</div>
       </body>
     </html>

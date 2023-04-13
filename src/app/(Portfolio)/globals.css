@@ -25,12 +25,16 @@
     fill: hsl(var(--svg-fill-hsl));
   }
 
-  .infernal {
-    color: #00ff00;
-    animation: glow 1s ease-out infinite alternate;
+  .image-mask {
+    mask-image: linear-gradient(to bottom, transparent, black 0%, rgba(0,0,0,0.01) 90%);
   }
 
-  @media (prefers-reduced-motion: no-preference) {
+  @media (prefers-reduced-motion: no-preference) or (min-width: 768px) {
+    .infernal {
+      color: #00ff00;
+      animation: glow 1s ease-out infinite alternate;
+    }
+
     /* TODO disable background animation for now */
     .bg-animation {
       position: relative;
@@ -53,7 +57,7 @@
       transform: rotateX(55deg);
       animation: crawl 20s linear infinite;
     }
-  
+
     @keyframes glow {
       from {
         text-shadow: 0 0 0.3rem #00ff00, 0 0 0.6rem #00ff00;
@@ -180,17 +184,12 @@ html {
 
 body {
   min-height: 100vh;
-  
-  /* TODO play with gradient colors */
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 50%);
-}
+  /* TODO test on phone */
 
-body,
-main {
-  position: relative; 
-  background-color: hsl(var(--bg-primary-hsl));
+  /* TODO play with gradient colors */
+  /* First breakpoint *was* 0, test after adding animation */
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   color: hsl(var(--text-primary-hsl));
-  padding: 0;
 }
 
 main {
