@@ -1,5 +1,5 @@
-// import Link from "next/link";
 import { Fragment } from "react";
+import Header from "@/src/components/Header";
 import { techStacks } from "@components/Logos";
 
 const Home: React.FC = () => {
@@ -19,7 +19,9 @@ const Home: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className="flex justify-center items-center"></div>
+        <div className="flex justify-center items-center text-xl">
+          <p>Here is all of my personal information</p>
+        </div>
       </section>
 
       <div>

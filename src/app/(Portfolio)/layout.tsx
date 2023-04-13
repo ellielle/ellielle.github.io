@@ -1,4 +1,3 @@
-import Header from "@components/Header";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -11,13 +10,11 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-animation">
       {/* TODO can't get width to stay consistent and responsive */}
-      <body className={[inter.className, "max-w-[1280px] mx-auto synth-grid"].join(" ")}>
-        <Header />
-        <div className="mt-[4rem]">{children}</div>
+      <body className={[inter.className, "max-w-[1280px] mx-auto"].join(" ")}>
+        <div>{children}</div>
       </body>
     </html>
   );
 }
-0;

@@ -30,20 +30,42 @@
     animation: glow 1s ease-out infinite alternate;
   }
 
-  .synth-grid {
-    /* background-color: ; */
-    background-image: linear-gradient(hsla(330, 100%, 71%, 0.6), 0.5rem, transparent 0.5rem),
-      linear-gradient(90deg, hsla(330, 100%, 71%, 0.6), 0.5rem, transparent 0.5rem);
-      background-size: 5rem 5rem;
-  }
-
   @media (prefers-reduced-motion: no-preference) {
+    /* TODO disable background animation for now */
+    .bg-animation {
+      position: relative;
+      perspective: 30rem;
+      z-index: -1;
+    }
+
+    .bg-animation::before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      z-index: -1;
+      background-image: linear-gradient(hsla(330, 100%, 71%, 0.6), 0.5rem, transparent 0.5rem),
+        linear-gradient(90deg, hsla(330, 100%, 71%, 0.6), 0.5rem, transparent 0.5rem);
+      background-size: 5rem 5rem;
+      background-attachment: fixed;
+      transform: rotateX(55deg);
+      animation: crawl 20s linear infinite;
+    }
+  
     @keyframes glow {
       from {
         text-shadow: 0 0 0.3rem #00ff00, 0 0 0.6rem #00ff00;
       }
       to {
         text-shadow: 0 0 0.3rem #00ff00, 0 0 0.6rem #00ff00, 0 0 1rem #00ff00;
+      }
+    }
+
+    @keyframes crawl {
+      to {
+        background-position-y: bottom;
       }
     }
   }
@@ -158,9 +180,24 @@ html {
 
 body {
   min-height: 100vh;
+  
+  /* TODO play with gradient colors */
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 50%);
+}
+
+body,
+main {
+  position: relative; 
   background-color: hsl(var(--bg-primary-hsl));
   color: hsl(var(--text-primary-hsl));
-  padding: 1rem;
+  padding: 0;
+}
+
+main {
+  padding-top: 4rem;
+  min-height: 100vh;
+  /* TODO play with gradient colors */
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }
 
 img,
