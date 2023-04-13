@@ -5,9 +5,9 @@ const About: React.FC = () => {
         <div className="text-red-500">Skip Sob Story</div>
 
         {/* TODO needs more other info not programming related, less sob story */}
-        <h1 className="mt-8 text-2xl">As the landing said, I'm Noelle L&#39;Amour 👋</h1>
+        <h1 className="mt-8 text-2xl">As the landing said, I&#39;m Noelle L&#39;Amour 👋</h1>
         <p className="text-lime-300 mt-8 text-xl">
-          I've been playing with coding as a hobby on and off for about the last 20 years. This
+          I&#39;ve been playing with coding as a hobby on and off for about the last 20 years. This
           never amounted to anything other than small side projects or code contributions. I never
           really got my interest to stick like it had in my early years of coding.
         </p>
@@ -17,7 +17,7 @@ const About: React.FC = () => {
         <p className="text-orange-300 mt-8 text-xl">
           Around the middle of 2018, I decided to finally give in to the Call of the :nth Child and
           started my journey toward being a developer. Originally, I picked up Ruby and Rails and
-          followed a few courses. I wasn't really feeling Ruby by the end of the course, but it was
+          followed a few courses. I wasn&#39;t really feeling Ruby by the end of the course, but it was
           helpful in learning other concepts that carry over to any language.
         </p>
         <p className="text-orange-300 mt-8 text-xl">

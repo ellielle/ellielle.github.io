@@ -8,14 +8,15 @@ const Home: React.FC = () => {
       <section className="text-left grid grid-cols-2">
         <div>
           <h1 className="text-3xl">
-            Hey, I'm <span className="gradient-text">Noelle L&#39;Amour</span>
+            Hey, I&#39;m <span className="gradient-text">Noelle L&#39;Amour</span>
           </h1>
           <div className="mb-10">
             {/* TODO finish intro */}
             {/* have very dim fading css around kalamazoo saying "it exists ?" */}
             <p className="text-xl mt-6">
-              I'm a full stack web developer from the mythical city of Kalamazoo, where I've learned
-              to channel the <span className="infernal">infernal</span> magicks of "Web Dev".
+              I&#39;m a full stack web developer from the mythical city of Kalamazoo, where I&#39;ve
+              learned to channel the <span className="infernal">infernal</span> magicks of &#34;Web
+              Dev&#34;.
             </p>
           </div>
         </div>
@@ -30,7 +31,7 @@ const Home: React.FC = () => {
           {/* CSS glow effect, maybe use a spell circle svg and make it transparent */}
           {/* these components probably need to become an array through mapping */}
           {techStacks.map((stack) => (
-            <Fragment key={stack.key}>{stack}</Fragment>
+            <>{stack}</>
           ))}
         </section>
       </div>
