@@ -26,15 +26,17 @@
   }
 
   .image-mask {
-    mask-image: linear-gradient(to bottom, transparent, black 0%, rgba(0,0,0,0.01) 90%);
+    mask-image: linear-gradient(to bottom, transparent, black 0%, rgba(0, 0, 0, 0.01) 90%);
   }
 
-  @media (prefers-reduced-motion: no-preference) or (min-width: 768px) {
+  @media (prefers-reduced-motion: no-preference) {
     .infernal {
       color: #00ff00;
       animation: glow 1s ease-out infinite alternate;
     }
+  }
 
+  @media (prefers-reduced-motion: no-preference) and (min-width: 768px) {
     /* TODO disable background animation for now */
     .bg-animation {
       position: relative;
