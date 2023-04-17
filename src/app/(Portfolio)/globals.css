@@ -38,7 +38,7 @@
 
   @media (prefers-reduced-motion: no-preference) and (min-width: 768px) {
     /* TODO disable background animation for now */
-    .bg-animation {
+    /* .bg-animation {
       position: relative;
       perspective: 30rem;
       z-index: -1;
@@ -58,7 +58,7 @@
       background-attachment: fixed;
       transform: rotateX(55deg);
       animation: crawl 20s linear infinite;
-    }
+    } */
 
     @keyframes glow {
       from {

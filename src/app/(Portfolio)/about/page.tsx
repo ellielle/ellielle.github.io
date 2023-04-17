@@ -1,7 +1,6 @@
 import { Fragment } from "react";
-import { usePathname } from "next/navigation";
 
-const ShortBlurb: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const ShortBlurb = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="text-center">
       <h1 className="mt-[6rem] text-2xl">A bit about myself</h1>
@@ -11,8 +10,8 @@ const ShortBlurb: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         started with making simple websites with HTML and CSS on Geocities. I was around 13 or so
         when I picked up <a href="https://www.graalonline.com/">Graal Online</a>, which eventually
         introduced player-made worlds. I talked my way into a group and started to learn very simple
-        C++. Some of my code made it into the main game server (at the time), so it&#39;s quite possible
-        it&#39;s still there! Though I hope for their sake it isn&#39;t. 😅
+        C++. Some of my code made it into the main game server (at the time), so it&#39;s quite
+        possible it&#39;s still there! Though I hope for their sake it isn&#39;t. 😅
       </p>
       <p
         className={[
@@ -28,7 +27,7 @@ const ShortBlurb: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   );
 };
 
-const RestOfTheOwl: React.FC = () => {
+const RestOfTheOwl = () => {
   return (
     <Fragment>
       <p className="text-orange-300 mt-8 text-xl">
@@ -40,25 +39,26 @@ const RestOfTheOwl: React.FC = () => {
       </p>
       <p className="text-orange-300 mt-8 text-xl">
         I picked up JavaScript afterward and decided to focus more on web development. JavaScript
-        and I vibe together pretty well, I&#39;ve been expanding my knowledge and toolkit since. I&#39;m
-        currently working on a deeper understanding of the frameworks I use, and the language
-        itself. I&#39;ve also picked up Go recently, though I haven&#39;t had much time to play with it yet.
+        and I vibe together pretty well, I&#39;ve been expanding my knowledge and toolkit since.
+        I&#39;m currently working on a deeper understanding of the frameworks I use, and the
+        language itself. I&#39;ve also picked up Go recently, though I haven&#39;t had much time to
+        play with it yet.
       </p>
       <p className="text-orange-300 mt-8 text-xl">
         Once I felt confident enough in doing so, I emerged back out into the world and began
-        freelancing. I&#39;ve worked on a projects from small in scope to a full serverless web app that
-        consumes multiple APIs. I also donate time to a not-for-profit from my home town when they
-        need updates to their WordPress site.
+        freelancing. I&#39;ve worked on a projects from small in scope to a full serverless web app
+        that consumes multiple APIs. I also donate time to a not-for-profit from my home town when
+        they need updates to their WordPress site.
       </p>
     </Fragment>
   );
 };
 
-const About: React.FC = () => {
+const About = () => {
   return (
-    <main className="px-4">
+    <Fragment>
       <ShortBlurb>{<RestOfTheOwl />}</ShortBlurb>
-    </main>
+    </Fragment>
   );
 };
 

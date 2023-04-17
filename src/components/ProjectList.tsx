@@ -2,7 +2,7 @@ import Image from "next/image";
 import Card from "@components/Card";
 import { projectList, Project } from "@utils/skillset";
 
-const ProjectList: React.FC<{ filterSelected: boolean }> = ({ filterSelected = false }) => {
+const ProjectList = ({ filterSelected = false }: { filterSelected: boolean }) => {
   let list: JSX.Element[] = [];
   let mappableList: Project[] = [];
 
