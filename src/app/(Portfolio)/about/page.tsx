@@ -5,22 +5,13 @@ const ShortBlurb = ({ children }: { children: React.ReactNode }) => {
     <div className="text-center">
       <h1 className="mt-[6rem] text-2xl">A bit about myself</h1>
 
-      <p className="text-lime-300 mt-8 text-xl">
+      <p className="text-orange-500 mt-8 text-xl">
         I&#39;ve been playing with programming as a hobby on and off for about the last 20 years. I
         started with making simple websites with HTML and CSS on Geocities. I was around 13 or so
         when I picked up <a href="https://www.graalonline.com/">Graal Online</a>, which eventually
         introduced player-made worlds. I talked my way into a group and started to learn very simple
         C++. Some of my code made it into the main game server (at the time), so it&#39;s quite
         possible it&#39;s still there! Though I hope for their sake it isn&#39;t. 😅
-      </p>
-      <p
-        className={[
-          typeof children === "string" ? "image-mask" : "",
-          "text-orange-300 mt-8 text-xl",
-        ].join(" ")}>
-        I lost interest after my second year of university, but still played around with some small
-        projects in C# and Ruby over the years. I also made a couple small games with GameMaker, but
-        they&#39;ve been lost to time.
       </p>
       {children}
     </div>
@@ -30,6 +21,11 @@ const ShortBlurb = ({ children }: { children: React.ReactNode }) => {
 const RestOfTheOwl = () => {
   return (
     <Fragment>
+      <p className="text-orange-500 mt-8 text-xl">
+        I lost interest after my second year of university, but still played around with some small
+        projects in C# and Ruby over the years. I also made a couple small games with GameMaker, but
+        they&#39;ve been lost to time.
+      </p>
       <p className="text-orange-300 mt-8 text-xl">
         Around the middle of 2018, I decided to finally give in to the Call of the :nth Child and
         started my journey toward more than hobby coding. Originally, I picked up Ruby and Rails and
