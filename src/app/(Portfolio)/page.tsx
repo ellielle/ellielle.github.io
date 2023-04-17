@@ -14,7 +14,7 @@ const Home = () => {
           <div className="mb-10">
             {/* TODO have very dim fading css around kalamazoo saying "it exists ?" */}
             <p className="text-xl mt-6">
-              I&#39;m a full stack web developer from the mythical city of Kalamazoo, where I&#39;ve
+              I&#39;m a full-stack web developer from the mythical city of Kalamazoo, where I&#39;ve
               learned to channel the <span className="infernal">infernal</span> magicks of &#34;Web
               Dev&#34;.
             </p>
@@ -42,8 +42,8 @@ const Home = () => {
       </section>
 
       <section className="text-center text-xl pb-10">
-        <h2 className="text-">Some of the things I've worked on</h2>
-        <div className="flex justify-items-center">
+        <h2>Some of the things I&#39;ve worked on</h2>
+        <div className="mt-8 mx-[20%] grid gap-4 md:grid-cols-2">
           <Projects filtered={true} />
         </div>
       </section>
