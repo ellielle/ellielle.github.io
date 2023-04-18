@@ -9,14 +9,19 @@ const Home = () => {
       <section className="text-left grid grid-cols-2">
         <div>
           <h1 className="text-3xl">
-            Hey, I&#39;m <span className="gradient-text">Noelle L&#39;Amour</span>
+            Well met, I&#39;m <span className="text-name">Noelle L&#39;Amour</span>
           </h1>
           <div className="mb-10">
-            {/* TODO have very dim fading css around kalamazoo saying "it exists ?" */}
             <p className="text-xl mt-6">
-              I&#39;m a full-stack web developer from the mythical city of Kalamazoo, where I&#39;ve
-              learned to channel the <span className="infernal">infernal</span> magicks of &#34;Web
-              Dev&#34;.
+              I am a full stack web developer from the shadow realm of Kalamazoo, where I have
+              delved deep into the <span className="text-infernal">infernal</span> magicks of web
+              development.{" "}
+            </p>
+            <p className="text-xl mt-6">
+              With my arcane knowledge, I can weave spells of interactivity and bring forth designs
+              from the depths of the abyss. I channel this ætheric energy to create websites that
+              are mesmerizing portals into the unknown, beckoning users to explore their deepest
+              desires and darkest fears.
             </p>
           </div>
         </div>
@@ -29,7 +34,7 @@ const Home = () => {
         <h2 className="mt-20 text-center text-xl">Some of my favorite schools of magick</h2>
         <ul className="mt-[5.5rem] grid grid-cols-2 grid-flow-row gap-5 place-content-center justify-items-center md:grid-cols-3 w-[60%] mx-auto gap-10 lg:grid-cols-[repeat(auto-fill,minmax(20%,100px))]">
           {techStacks.map((stack) => (
-            <li key={Math.random()}>{stack}</li>
+            <li key={stack.key}>{stack}</li>
           ))}
         </ul>
       </section>
