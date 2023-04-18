@@ -4,12 +4,12 @@ import { Metadata } from "next";
 // TODO add favicon
 // TODO add og:image
 export const sharedMetadata: Metadata = {
+  metadataBase: new URL("https://noellelamour.vercel.app/"),
   title: {
     template: "%s | Noelle L'Amour",
     default: "Noelle L'Amour",
   },
   description: "Full-stack Developer",
-  metadataBase: new URL("https://noellelamour.vercel.app/"),
   themeColor: [
     // TODO add theme-colors
     { media: "(prefers-color-scheme: dark)", color: "#000000" },
@@ -31,7 +31,7 @@ export const sharedMetadata: Metadata = {
     type: "website",
     locale: "en_US",
     // TODO add og:url
-    url: "noellelamour.vercel.app",
+    url: "https://noellelamour.vercel.app/",
     images: [
       {
         //  TODO add og:image via api ?
