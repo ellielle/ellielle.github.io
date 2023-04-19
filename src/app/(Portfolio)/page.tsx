@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Projects from "./projects/page";
 import { techStacks } from "@components/Logos";
+import { socialMedia } from "@components/Logos";
 import { ShortBlurb } from "./about/page";
 
 const Home = () => {
   return (
     <main className="px-4">
-      <section className="text-left grid grid-cols-2">
+      <section className="text-left grid grid-cols-[2fr,1fr]">
         <div>
           <h1 className="text-3xl">
             Well met, I&#39;m <span className="text-name">Noelle L&#39;Amour</span>
@@ -25,9 +26,13 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div className="flex justify-center items-center text-xl">
-          <p>Here is all of my personal information</p>
-        </div>
+        <ul className="justify-center items-center text-md">
+          {socialMedia.map((platform) => (
+            <li key={platform.key} className="mb-4 grid grid-cols-[1fr,10fr]">
+              {platform}
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section>
@@ -48,7 +53,7 @@ const Home = () => {
 
       <section className="text-center text-xl pb-10">
         <h2>Some of the things I&#39;ve worked on</h2>
-        <div className="mt-8 mx-[20%] grid gap-4 md:grid-cols-2">
+        <div className="mt-8 mx-[20%] grid gap-10 md:grid-cols-2">
           <Projects filtered={true} />
         </div>
       </section>
