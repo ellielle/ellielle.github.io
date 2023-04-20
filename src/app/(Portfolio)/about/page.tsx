@@ -1,19 +1,20 @@
 import { Fragment } from "react";
 
-const ShortBlurb = ({ children }: { children: React.ReactNode }) => {
+export const metadata = {};
+
+const ShortBlurb = () => {
   return (
     <div className="text-center">
       <h1 className="mt-[6rem] text-2xl">A bit about myself</h1>
 
       <p className="text-orange-500 mt-8 text-xl">
-        I&#39;ve been playing with programming as a hobby on and off for about the last 20 years. I
-        started with making simple websites with HTML and CSS on Geocities. I was around 13 or so
-        when I picked up <a href="https://www.graalonline.com/">Graal Online</a>, which eventually
-        introduced player-made worlds. I talked my way into a group and started to learn very simple
-        C++. Some of my code made it into the main game server (at the time), so it&#39;s quite
-        possible it&#39;s still there! Though I hope for their sake it isn&#39;t. 😅
+        In my youth, I dabbled in the dark arts of programming, honing my skills with simple
+        incantations of HTML and CSS on Geocities. Soon, I discovered the realm of{" "}
+        <a href="https://www.graalonline.com/">Graal Online</a>, where I delved deeper into the
+        arcane. I came under the tutelage of a group of masters of the craft, who taught me the
+        basics of the ancient tongue of C++. I used this knowledge to weave code into the very
+        fabric of the world.
       </p>
-      {children}
     </div>
   );
 };
@@ -22,29 +23,29 @@ const RestOfTheOwl = () => {
   return (
     <Fragment>
       <p className="text-orange-500 mt-8 text-xl">
-        I lost interest after my second year of university, but still played around with some small
-        projects in C# and Ruby over the years. I also made a couple small games with GameMaker, but
-        they&#39;ve been lost to time.
+        Listen, traveler, for I have traversed the varied realms of software development for nigh on
+        two decades. It began with humble origins; simple incantations of HTML and CSS. In my 12th
+        summer, I was taken under the wing of a number of masters of the craft, who set me on this
+        path. Their first test: deciphering the ancient tongue of C++ with nothing but samples to
+        learn from.
       </p>
       <p className="text-orange-300 mt-8 text-xl">
-        Around the middle of 2018, I decided to finally give in to the Call of the :nth Child and
-        started my journey toward more than hobby coding. Originally, I picked up Ruby and Rails and
-        followed a few courses. I wasn&#39;t really feeling Ruby by the end of the course, but the
-        experience of properly structured learning and a deeper understanding of concepts in general
-        brought back the spark.
+        I fervently pursued more knowledge until I was of age to attend an academic institute.
+        Though my passion waned in my second year of academia, I never truly abandoned my craft. I
+        continued to dabble in various forms of the art, crafting simple spells of C# and Ruby.
       </p>
       <p className="text-orange-300 mt-8 text-xl">
-        I picked up JavaScript afterward and decided to focus more on web development. JavaScript
-        and I vibe together pretty well, I&#39;ve been expanding my knowledge and toolkit since.
-        I&#39;m currently working on a deeper understanding of the frameworks I use, and the
-        language itself. I&#39;ve also picked up Go recently, though I haven&#39;t had much time to
-        play with it yet.
+        Yet, I could not resist the Call of the :nth Child forever. I returned to the fold, delving
+        into the mysteries of Ruby and Rails. But it was not until I came upon the cult of the Lord
+        of the Pits, JavaScript, that I learned to wield my knowledge properly. With their guidance,
+        I have been weaving more and more complex spells, delving deeper into the secrets this
+        &#39;web&#39; holds.
       </p>
       <p className="text-orange-300 mt-8 text-xl">
-        Once I felt confident enough in doing so, I emerged back out into the world and began
-        freelancing. I&#39;ve worked on a projects from small in scope to a full serverless web app
-        that consumes multiple APIs. I also donate time to a not-for-profit from my home town when
-        they need updates to their WordPress site.
+        Now, I roam the land as a wandering CSSorceress, offering my skills to those in need. From
+        small-scale charms to large serverless rituals that call upon multiple APIs, I am always
+        eager to push the boundaries of my craft. And when my skills are not needed for hire, I
+        offer them freely to a not-for-profit guild in my homeland.
       </p>
     </Fragment>
   );
@@ -52,9 +53,11 @@ const RestOfTheOwl = () => {
 
 const About = () => {
   return (
-    <Fragment>
-      <ShortBlurb>{<RestOfTheOwl />}</ShortBlurb>
-    </Fragment>
+    <main>
+      <article>
+        <RestOfTheOwl />
+      </article>
+    </main>
   );
 };
 

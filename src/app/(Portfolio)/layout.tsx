@@ -9,7 +9,7 @@ export const metadata = { ...sharedMetadata };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="bg-animation">
-      {/* TODO can't get width to stay consistent and responsive (maybe fixed?) */}
+      {/* TODO add border between background and foreground */}
       <body
         className={[inter.className, "max-w-[1280px] sm:mx-[5%] min-[1400px]:mx-auto"].join(" ")}>
         <div>{children}</div>

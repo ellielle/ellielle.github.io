@@ -6,7 +6,7 @@ import { ShortBlurb } from "./about/page";
 
 const Home = () => {
   return (
-    <main className="px-4">
+    <main className="px-8">
       <section className="text-left grid grid-cols-[2fr,1fr]">
         <div>
           <h1 className="text-3xl">
@@ -14,7 +14,7 @@ const Home = () => {
           </h1>
           <div className="mb-10">
             <p className="text-xl mt-6">
-              I am a full stack web developer from the shadow realm of Kalamazoo, where I have
+              I am a full stack web developer from the forgotten realm of Kalamazoo, where I have
               delved deep into the <span className="text-infernal">infernal</span> magicks of web
               development.{" "}
             </p>
@@ -26,6 +26,7 @@ const Home = () => {
             </p>
           </div>
         </div>
+        {/* TODO remove from here, return header to headS */}
         <ul className="justify-center items-center text-md">
           {socialMedia.map((platform) => (
             <li key={platform.key} className="mb-4 grid grid-cols-[1fr,10fr]">
@@ -45,7 +46,7 @@ const Home = () => {
       </section>
 
       <section className="text-xl pb-20 text-center">
-        <ShortBlurb>{""}</ShortBlurb>
+        <ShortBlurb />
         <div className="mt-10">
           <Link href="/about">More About Me --&#62;</Link>
         </div>
