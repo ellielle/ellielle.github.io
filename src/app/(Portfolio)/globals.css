@@ -23,6 +23,12 @@
     height: 4rem;
     width: auto;
     fill: hsl(var(--svg-fill-hsl));
+    transition: all 0.5s ease-out;
+  }
+
+  .svg-logo:hover {
+    transition: all 0.5s ease-in-out;
+    filter: brightness(1.5)
   }
 
   .svg-logo-contact {
@@ -47,32 +53,25 @@
       transition: all 0.5s ease-in-out;
     }
 
-    .text-infernal {
-      color: #00ff00;
-      animation: glow 2s ease-out infinite alternate;
-    }
-
     .warped {
       filter: hue-rotate(180deg);
+    }
+
+    .text-infernal {
+      color: #00ff00;
+      /* animation: glow 2s ease-out infinite alternate; */
+      text-shadow: 0 0 0.3rem #00ff00, 0 0 0.6rem #00ff00, 0 0 1rem #00ff00;
+      transition: all 2s linear;
+    }
+
+    .text-infernal:hover {
+      /* make the text grow larger on hover */
+      transform: scale(2.1);
     }
   }
 
   @media (prefers-reduced-motion: no-preference) and (min-width: 768px) {
     /* TODO redo background animation */
-    .bg-animation {
-      /* Create an animation with stars as points that move around a central axis */
-      
-      
-    }
-
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 0.3rem #00ff00, 0 0 0.6rem #00ff00;
-      }
-      to {
-        text-shadow: 0 0 0.3rem #00ff00, 0 0 0.6rem #00ff00, 0 0 1rem #00ff00;
-      }
-    }
 
     @keyframes crawl {
       to {

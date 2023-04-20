@@ -7,8 +7,8 @@ import { ShortBlurb } from "./about/page";
 const Home = () => {
   return (
     <main className="px-8">
-      <section className="text-left grid grid-cols-[2fr,1fr]">
-        <div>
+      <section className="text-left grid">
+        <div className="mx-[15%]">
           <h1 className="text-3xl">
             Well met, I&#39;m <span className="text-name">Noelle L&#39;Amour</span>
           </h1>
@@ -38,7 +38,7 @@ const Home = () => {
 
       <section>
         <h2 className="mt-20 text-center text-xl">Some of my favorite schools of magick</h2>
-        <ul className="mt-[5.5rem] grid grid-cols-2 grid-flow-row gap-5 place-content-center justify-items-center md:grid-cols-3 w-[60%] mx-auto gap-10 lg:grid-cols-[repeat(auto-fill,minmax(20%,100px))]">
+        <ul className="mt-[5.5rem] grid grid-cols-2 grid-flow-row gap-5 place-content-center justify-items-center md:grid-cols-3 w-[60%] mx-auto md:gap-10 lg:grid-cols-[repeat(auto-fill,minmax(20%,100px))]">
           {techStacks.map((stack) => (
             <li key={stack.key}>{stack}</li>
           ))}

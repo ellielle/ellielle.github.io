@@ -4,8 +4,6 @@ const menu: Array<[string, string]> = [
   ["/", "Home"],
   ["/projects", "Projects"],
   ["/blog", "Blog"],
-  // ["/redact", "[REDACTED]"],
-  // ["/redact", "[REDACTED]"],
 ];
 
 // TODO refactor nav into a smaller section, go hamburger for small screen probably

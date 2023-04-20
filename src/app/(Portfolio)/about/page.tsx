@@ -5,7 +5,7 @@ export const metadata = {};
 const ShortBlurb = () => {
   return (
     <div className="text-center">
-      <h1 className="mt-[6rem] text-2xl">A bit about myself</h1>
+      <h1 className="mt-[6rem] text-2xl"></h1>
 
       <p className="text-orange-500 mt-8 text-xl">
         In my youth, I dabbled in the dark arts of programming, honing my skills with simple
