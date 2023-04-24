@@ -9,7 +9,7 @@ const Background = () => {
   useEffect(() => {
     const { current: canvas } = canvasRef;
 
-    const count = 100;
+    const count = 50;
     let particles: Particle[] = [];
     if (!canvas) return;
 

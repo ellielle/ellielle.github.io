@@ -28,7 +28,7 @@
 
   .svg-logo:hover {
     transition: all 0.5s ease-in-out;
-    filter: brightness(1.5)
+    filter: brightness(1.5);
   }
 
   .svg-logo-contact {
@@ -58,9 +58,10 @@
     }
 
     .text-infernal {
-      color: #00ff00;
+      color: hsl(120, 100%, 50%);
       /* animation: glow 2s ease-out infinite alternate; */
-      text-shadow: 0 0 0.3rem #00ff00, 0 0 0.6rem #00ff00, 0 0 1rem #00ff00;
+      text-shadow: 0 0 0.3rem hsl(120, 100%, 50%), 0 0 0.6rem hsl(120, 100%, 50%),
+        0 0 1rem hsl(120, 100%, 50%);
       transition: all 2s linear;
     }
 
