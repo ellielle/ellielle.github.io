@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <main className="px-8">
       <section className="text-left grid">
-        <div className="mx-[15%]">
+        <div className="md:mx-[15%]">
           <h1 className="text-3xl">
             Well met, I&#39;m <span className="text-name">Noelle L&#39;Amour</span>
           </h1>
@@ -54,7 +54,7 @@ const Home = () => {
 
       <section className="text-center text-xl pb-10">
         <h2>Some of the things I&#39;ve worked on</h2>
-        <div className="mt-8 mx-[20%] grid gap-10 md:grid-cols-2">
+        <div className="mt-8 grid grid-cols-1 gap-10 md:grid-cols-2 md:mx-[20%]">
           <Projects filtered={true} />
         </div>
       </section>
