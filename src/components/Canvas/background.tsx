@@ -3,6 +3,25 @@
 import { useRef, useEffect } from "react";
 import { Particle } from "../../app/model/particle";
 
+const createParticle = () => {
+  const screenWidth = window.innerWidth;
+  const screenHeight = window.innerHeight;
+  const angle = Math.random() * Math.PI * 2;
+  const sign = Math.random() > 0.5 ? 1 : -1;
+  const radius = 1 + Math.random() * 5;
+  const rotationRadius = window.innerWidth / 3 + Math.random() * 100;
+  return new Particle(
+    screenWidth,
+    screenHeight,
+    angle,
+    sign,
+    radius,
+    rotationRadius,
+    screenWidth / 2,
+    screenHeight / 2
+  );
+};
+
 const Background = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -19,7 +38,7 @@ const Background = () => {
 
     if (ctx) {
       for (let i = 0; i < count; i++) {
-        particles.push(new Particle(canvas.width, canvas.height));
+        particles.push(createParticle());
       }
 
       const animate = () => {
@@ -28,11 +47,12 @@ const Background = () => {
           particle.draw(ctx);
           particle.update();
         });
+
         window.requestAnimationFrame(animate);
       };
       animate();
     }
-  }, []);
+  });
 
   return <canvas ref={canvasRef} />;
 };

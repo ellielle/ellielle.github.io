@@ -97,7 +97,7 @@
     --bg-primary-hsl: 255deg, 6%, 13%;
     --bg-secondary-hsl: 255deg, 6%, 13%;
     --link-hover-hsl: 153, 47%, 49%;
-    --text-primary-hsl: 0deg, 0%, 95%;
+    --text-primary-hsl: 0deg, 0%, 90%;
     --svg-fill-hsl: 0deg, 0%, 85%;
     --text-gradient: linear-gradient(to right, hsl(278, 74%, 54%), hsl(197, 75%, 47%) 40%);
   }

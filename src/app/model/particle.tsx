@@ -1,43 +1,57 @@
 export class Particle {
-  x: number;
-  y: number;
-  radius: number;
-  speedX: number;
-  speedY: number;
-  screenHeight: number;
   screenWidth: number;
-  opacityTimer: number;
+  screenHeight: number;
+  angle: number;
+  initialX: number;
+  initialY: number;
+  currentX: number;
+  currentY: number;
+  radius: number;
+  sign: number;
+  rotationRadius: number;
+  increment: number;
 
-  constructor(canvasWidth: number, canvasHeight: number) {
+  constructor(
+    canvasWidth: number,
+    canvasHeight: number,
+    angle: number,
+    sign: number,
+    radius: number,
+    rotationRadius: number,
+    initialX: number,
+    initialY: number
+  ) {
     this.screenWidth = canvasWidth;
     this.screenHeight = canvasHeight;
-    this.x = Math.random() * this.screenWidth;
-    this.y = Math.random() * this.screenHeight;
-    this.radius = Math.random() * 2 + 1;
-    this.speedX = this.randomizeSpeed(-1, 1);
-    this.speedY = this.randomizeSpeed(1, 2);
-    this.opacityTimer = Math.floor(Math.random() * (15 - 5 + 1) + 5);
-  }
-
-  private randomizeSpeed(minimum: number, maximum: number) {
-    return minimum + Math.random() * (maximum - minimum + 1);
+    this.angle = angle;
+    this.initialX = initialX;
+    this.initialY = initialY;
+    this.currentX = initialX;
+    this.currentY = initialY;
+    this.radius = radius;
+    this.rotationRadius = rotationRadius;
+    this.sign = sign;
+    this.increment = 0.001;
   }
 
   draw(ctx: CanvasRenderingContext2D) {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
     ctx.fillStyle = "hsl(120, 100%, 50%)";
-    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(this.currentX, this.currentY, this.radius, 0, Math.PI * 2, false);
     ctx.closePath();
+    ctx.fill();
+    // ctx.transform(1, 0.7, 0.4, 1, 0, 0);
   }
 
   update() {
-    this.x += this.speedX;
-    this.y += this.speedY;
+    this.angle += this.increment;
 
-    if (this.y > this.screenHeight) {
-      this.y = -10;
-      this.x = Math.random() * this.screenWidth * 1.5;
+    this.currentX = this.initialX + Math.cos(this.angle) * this.rotationRadius;
+    this.currentY = this.initialY + Math.sin(this.angle) * this.rotationRadius;
+
+    if (this.angle >= Math.PI * 2) {
+      this.angle = 0;
+      // this.increment = 0.01 + 0.1;
     }
   }
 }
