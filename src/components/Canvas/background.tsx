@@ -1,60 +1,30 @@
 "use client";
 
-import { useRef, useEffect } from "react";
-import { Particle } from "../../app/model/particle";
-
-const createParticle = () => {
-  const screenWidth = window.innerWidth;
-  const screenHeight = window.innerHeight;
-  const angle = Math.random() * Math.PI * 2;
-  const sign = Math.random() > 0.5 ? 1 : -1;
-  const radius = 1 + Math.random() * 5;
-  const rotationRadius = window.innerWidth / 3 + Math.random() * 100;
-  return new Particle(
-    screenWidth,
-    screenHeight,
-    angle,
-    sign,
-    radius,
-    rotationRadius,
-    screenWidth / 2,
-    screenHeight / 2
-  );
-};
+import { useCallback } from "react";
+import type { Container, Engine } from "tsparticles-engine";
+import Particles from "react-particles";
+import { loadFull } from "tsparticles";
+import { particleOptions } from "../../app/model/particles";
 
 const Background = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const particleInit = useCallback(async (engine: Engine) => {
+    console.log(engine);
+    await loadFull(engine);
+  }, []);
 
-  useEffect(() => {
-    const { current: canvas } = canvasRef;
+  const particlesLoaded = useCallback(async (container: Container | undefined) => {
+    console.log(container);
+  }, []);
 
-    const count = 50;
-    let particles: Particle[] = [];
-    if (!canvas) return;
-
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    const ctx = canvas.getContext("2d");
-
-    if (ctx) {
-      for (let i = 0; i < count; i++) {
-        particles.push(createParticle());
-      }
-
-      const animate = () => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particles.forEach((particle) => {
-          particle.draw(ctx);
-          particle.update();
-        });
-
-        window.requestAnimationFrame(animate);
-      };
-      animate();
-    }
-  });
-
-  return <canvas ref={canvasRef} />;
+  return (
+    <Particles
+      id="bg-stars"
+      init={particleInit}
+      loaded={particlesLoaded}
+      options={particleOptions}
+      className="hidden sm:contents"
+    />
+  );
 };
 
 export default Background;
