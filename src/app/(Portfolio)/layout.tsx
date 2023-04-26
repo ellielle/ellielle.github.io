@@ -11,7 +11,6 @@ export const metadata = { ...sharedMetadata };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      {/* TODO add border between background and foreground, add fading opacity so stars can be seen */}
       <body
         className={[inter.className, "max-w-[1280px] sm:mx-[5%] min-[1400px]:mx-auto"].join(" ")}>
         <div className="sm:opacity-mask">{children}</div>

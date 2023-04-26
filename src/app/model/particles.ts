@@ -13,7 +13,7 @@ export const particleOptions: ISourceOptions = {
   },
   fpsLimit: 30,
   interactivity: {
-    detectsOn: "window",
+    detectsOn: "canvas",
     events: {
       resize: false,
     },
