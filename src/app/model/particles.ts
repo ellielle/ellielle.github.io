@@ -1,9 +1,12 @@
 import type { ISourceOptions } from "tsparticles-engine";
 
 export const particleOptions: ISourceOptions = {
+  // TODO rogue canvas element from tsparticles is causing layout shift
+  // TODO figure out how to optimize and/or fix
+  // TODO currently the element is pushed to the bottom. Maybe make absolute?
   id: "bg-stars",
   detectRetina: false,
-  delay: 1,
+  delay: 2,
   backgroundMode: {
     enable: true,
     zIndex: -1,
