@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Projects from "./projects/page";
 import Tech from "@components/Logos/Tech";
-import { socialMedia } from "@components/Logos";
 import { ShortBlurb } from "./about/page";
 
 const Home = () => {
@@ -27,14 +26,6 @@ const Home = () => {
               </p>
             </div>
           </div>
-          {/* TODO remove from here, return header to headS */}
-          <ul className="justify-center items-center text-md">
-            {socialMedia.map((platform) => (
-              <li key={platform.key} className="mb-4 grid grid-cols-[1fr,10fr]">
-                {platform}
-              </li>
-            ))}
-          </ul>
         </section>
 
         <Tech />

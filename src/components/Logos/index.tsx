@@ -1,10 +1,10 @@
-import { Vue } from "./Vue";
-import { Next } from "./Next";
-import { Nuxt } from "./Nuxt";
-import { React } from "./React";
-import { Netlify } from "./Netlify";
-import { Vercel } from "./Vercel";
-import { TypeScript } from "./TypeScript";
+import { Vue } from "./Tech/Vue";
+import { Next } from "./Tech/Next";
+import { Nuxt } from "./Tech/Nuxt";
+import { React } from "./Tech/React";
+import { Netlify } from "./Tech/Netlify";
+import { Vercel } from "./Tech/Vercel";
+import { TypeScript } from "./Tech/TypeScript";
 import { Email } from "./Social/Email";
 import { LinkedIn } from "./Social/LinkedIn";
 import { GitHub } from "./Social/GitHub";
@@ -20,6 +20,8 @@ export const socialMedia = [
   { Component: Email, url: "mail" },
   { Component: LinkedIn, url: "https://www.linkedin.com/in/nlamour/" },
   { Component: GitHub, url: "https://github.com/ellielle" },
+  // { Component: Discord, url: "" },
+  // { Component: Twitter, url: "" },
 ].map(({ Component, url }, index) => (
   <Fragment key={`${Component.name}-${index}`}>
     <Component />

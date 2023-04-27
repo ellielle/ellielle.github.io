@@ -18,6 +18,7 @@ export const particleOptions: ISourceOptions = {
       resize: false,
     },
   },
+  pauseOnOutsideViewport: true,
   particles: {
     color: {
       value: "#fff",

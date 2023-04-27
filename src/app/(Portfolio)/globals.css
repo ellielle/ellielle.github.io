@@ -37,6 +37,16 @@
     fill: hsl(var(--svg-fill-hsl));
   }
 
+  .opacity-mask {
+    mask-image: linear-gradient(
+      to right,
+      hsla(230, 23%, 5%, 0) 0%,
+      hsla(230, 23%, 5%, 1) 10%,
+      hsla(230, 23%, 5%, 1) 90%,
+      hsla(230, 23%, 5%, 0) 100%
+    );
+  }
+
   /* Media Queries */
   /* TODO animate buttons, transitions, etc */
 
@@ -54,18 +64,10 @@
     }
   }
 
-  .opacity-mask {
-    mask-image: linear-gradient(
-      to right,
-      hsla(230, 23%, 5%, 0) 0%,
-      hsla(230, 23%, 5%, 1) 10%,
-      hsla(230, 23%, 5%, 1) 90%,
-      hsla(230, 23%, 5%, 0) 100%
-    );
-  }
-
-  @media (prefers-reduced-motion: no-preference) and (min-width: 640) {
-    /* TODO ? */
+  @media (prefers-reduced-motion: reduce) {
+    canvas {
+      display: none;
+    }
   }
 }
 
@@ -102,7 +104,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* font: inherit; */
 }
 
 html {
@@ -113,19 +114,17 @@ html {
 
 body {
   min-height: 100vh;
-
-  /* TODO play with gradient colors */
   color: hsl(var(--text-primary-hsl));
 }
 
 main {
   padding-top: 4rem;
   min-height: 100vh;
-  /* TODO play with gradient colors */
 }
 
 main,
 body {
+  /* TODO play with gradient colors */
   background: radial-gradient(ellipse at bottom, hsl(212, 33%, 16%) 0%, hsl(230, 25%, 5%) 100%);
 }
 
@@ -149,13 +148,8 @@ a {
   text-decoration: none;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-} */
-
 @media (hover: hover) {
+  /* TODO link hover animations */
   a:hover,
   a:focus {
     color: hsl(var(--link-hover-hsl));
