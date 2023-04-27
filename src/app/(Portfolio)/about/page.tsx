@@ -11,14 +11,14 @@ const ShortBlurb = () => {
     <div className="text-center">
       <h1 className="mt-[6rem] text-2xl"></h1>
 
-      <>
+      <p>
         In my youth, I dabbled in the dark arts of programming, honing my skills with simple
         incantations of HTML and CSS on Geocities. Soon, I discovered the realm of{" "}
         <a href="https://www.graalonline.com/">Graal Online</a>, where I delved deeper into the
         arcane. I came under the tutelage of a group of masters of the craft, who taught me the
         basics of the ancient tongue of C++. I used this knowledge to weave code into the very
         fabric of the world.
-      </>
+      </p>
     </div>
   );
 };

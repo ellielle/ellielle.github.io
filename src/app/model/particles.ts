@@ -35,7 +35,7 @@ export const particleOptions: ISourceOptions = {
       animation: {
         enable: true,
         minimumValue: 0.05,
-        speed: 0.5,
+        speed: 0.7,
         sync: false,
         startValue: "min",
       },
