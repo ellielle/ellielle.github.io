@@ -30,7 +30,6 @@ export const sharedMetadata: Metadata = {
     siteName: "Noelle L'Amour",
     type: "website",
     locale: "en_US",
-    // TODO add og:url
     url: "https://noellelamour.vercel.app/",
     images: [
       {
@@ -49,6 +48,6 @@ export const sharedMetadata: Metadata = {
   },
   icons: {
     // TODO add favicon via api ?
-    shortcut: "/images/favicon.ico",
+    shortcut: "https://noellelamour.vercel.app/images/favicon.ico",
   },
 };

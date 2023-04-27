@@ -1,10 +1,8 @@
-import { Inter } from "next/font/google";
+import { inter } from "@utils/load-fonts";
 import { sharedMetadata } from "@utils/shared-metadata";
 import "./globals.css";
 import dynamic from "next/dynamic";
-const Background = dynamic(() => import("@/src/components/Canvas/background"));
-
-const inter = Inter({ subsets: ["latin"], display: "swap" });
+const Background = dynamic(() => import("@components/Canvas/background"));
 
 export const metadata = { ...sharedMetadata };
 
