@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
-import otl from "../../public/otl.png";
-import bchs from "../../public/bchs.png";
+import otl from "@/public/otl.png";
+import bchs from "@/public/bchs.png";
 
 interface Project {
   name: string;

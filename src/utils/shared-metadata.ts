@@ -3,6 +3,7 @@ import { Metadata } from "next";
 // TODO replace lazy metadata
 // TODO add favicon
 // TODO add og:image
+// TODO either add the built-in support for a sitemap or double-check the plugin's sitemap
 export const sharedMetadata: Metadata = {
   metadataBase: new URL("https://noellelamour.vercel.app/"),
   title: {
@@ -11,8 +12,7 @@ export const sharedMetadata: Metadata = {
   },
   description: "Full-stack Developer",
   themeColor: [
-    // TODO add theme-colors
-    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+    { media: "(prefers-color-scheme: dark)", color: "#1b2836" },
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
   ],
   robots: {
@@ -47,7 +47,7 @@ export const sharedMetadata: Metadata = {
     // TODO creator: "",
   },
   icons: {
-    // TODO add favicon via api ?
-    shortcut: "https://noellelamour.vercel.app/images/favicon.ico",
+    // TODO change favicon from default vercel ico
+    shortcut: "/favicon.ico",
   },
 };

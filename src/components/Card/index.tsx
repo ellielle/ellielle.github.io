@@ -1,6 +1,6 @@
-import { Project } from "@utils/skillset";
+import type { Project } from "@/src/app/model/skillset";
 
-const Card = ({ children, project }: { children: React.ReactNode; project: Partial<Project> }) => {
+const Card = ({ children, project }: { children: React.ReactNode; project: Project }) => {
   return (
     <div className="card-container">
       <div className="">{children}</div>
