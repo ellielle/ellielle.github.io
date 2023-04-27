@@ -10,7 +10,7 @@ const Home = () => {
         <section className="text-left grid">
           <div>
             <h1 className="text-3xl">
-              Well met, I&#39;m <span className="text-name">Noelle L&#39;Amour</span>
+              Well met, I am <span className="text-name">Noelle L&#39;Amour</span>
             </h1>
             <div className="mb-10">
               <p className="text-xl mt-6">

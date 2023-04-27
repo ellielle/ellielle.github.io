@@ -33,8 +33,8 @@ export const sharedMetadata: Metadata = {
     url: "https://noellelamour.vercel.app/",
     images: [
       {
-        //  TODO add og:image via api ?
-        url: "https://noellelamour.vercel.app/images/og-image.png",
+        //  TODO add og:image
+        url: "https://noellelamour.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "Noelle L'Amour",

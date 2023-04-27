@@ -23,6 +23,7 @@ const Background = () => {
       loaded={particlesLoaded}
       options={particleOptions}
       className="hidden sm:contents"
+      canvasClassName="background-animation"
     />
   );
 };
