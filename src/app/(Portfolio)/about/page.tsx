@@ -8,9 +8,8 @@ const fancyCapitals = (letter: string) => {
 
 const ShortBlurb = () => {
   return (
-    <div className="text-center">
-      <h1 className="mt-[6rem] text-2xl"></h1>
-
+    <div className="text-left">
+      <h1 className="mt-6 text-2xl"></h1>
       <p>
         In my youth, I dabbled in the dark arts of programming, honing my skills with simple
         incantations of HTML and CSS on Geocities. Soon, I discovered the realm of{" "}
@@ -48,7 +47,7 @@ const About = () => {
           deeper into the secrets this &#39;web&#39; holds.
         </p>
         <p className="mt-8 text-xl">
-          {fancyCapitals("N")}ow, I roam the land as a wandering CSSorceress, offering my skills to
+          {fancyCapitals("N")}ow, I roam the land as a wandering <span className="text-name font-bold text-2xl">CSSorceress</span>, offering my skills to
           those in need. From small-scale charms to large serverless rituals that call upon multiple
           APIs, I am always eager to push the boundaries of my craft. And when my skills are not
           needed for hire, I offer them freely to a not-for-profit guild in my homeland.

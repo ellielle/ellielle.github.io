@@ -20,7 +20,7 @@
   }
 
   .svg-logo {
-    height: 4rem;
+    height: 3.3rem;
     width: auto;
     fill: hsl(var(--svg-fill-hsl));
     transition: all 0.5s ease-out;
