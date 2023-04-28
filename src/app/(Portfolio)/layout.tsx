@@ -6,7 +6,7 @@ const Background = dynamic(() => import("@components/Canvas/background"));
 
 export const metadata = { ...sharedMetadata };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }): JSX.Element {
   return (
     <html lang="en">
       <body

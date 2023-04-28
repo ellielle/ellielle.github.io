@@ -3,7 +3,7 @@ import Projects from "./projects/page";
 import Tech from "@components/Logos/Tech";
 import { ShortBlurb } from "./about/page";
 
-const Home = () => {
+const Home = (): JSX.Element => {
   return (
     <main className="px-8">
       <div className="md:mx-[8%]">
@@ -30,7 +30,7 @@ const Home = () => {
 
         <section className="text-xl mb-20 grid">
           <ShortBlurb />
-          <div className="mt-14 mr-14 text-center md:text-right">
+          <div className="mt-14 mr-14 text-right">
             <Link href="/about" className="text-infernal">More About Me --&#62;</Link>
           </div>
         </section>

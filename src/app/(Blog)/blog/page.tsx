@@ -1,4 +1,4 @@
-const Blog = () => {
+const Blog = (): JSX.Element => {
   return (
     <main className="">
       <div className="">

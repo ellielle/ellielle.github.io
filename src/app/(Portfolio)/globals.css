@@ -7,23 +7,24 @@
     background: var(--text-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: all 3s linear;
   }
 
   .card-container {
     display: grid;
     width: fit-content;
     text-align: center;
-    padding: 0.5rem;
-    border: solid 1px hsl(231, 15%, 18%);
+    padding: 0.1rem;
     border-radius: 0.5rem;
-    box-shadow: 0 0 0.5rem hsl(34, 51%, 43%);
+    box-shadow: 0 0 0.5rem hsla(0, 0%, 61%, 0.5);
   }
 
   .svg-logo {
     height: 3.3rem;
     width: auto;
     fill: hsl(var(--svg-fill-hsl));
-    transition: all 0.5s ease-out;
+    transform-style: preserve-3d;
+    will-change: transform;
   }
 
   .svg-logo-contact {
@@ -41,28 +42,6 @@
       hsla(230, 23%, 5%, 0) 100%
     );
   }
-
-  /* Media Queries */
-  /* TODO animate buttons, transitions, etc */
-
-  @media (prefers-reduced-motion: no-preference) {
-    /* Some people hate this feature */
-    html {
-      scroll-behavior: smooth;
-    }
-
-    .text-infernal {
-      color: hsl(120, 100%, 50%);
-      text-shadow: 0 0 0.2rem hsl(120, 100%, 50%), 0 0 0.5rem hsl(120, 100%, 50%),
-        0 0 0.8rem hsl(120, 100%, 50%);
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    canvas {
-      display: none;
-    }
-  }
 }
 
 /* TODO move some common css to tailwind config */
@@ -77,6 +56,7 @@
   --bg-secondary-hsl: 255deg, 6%, 13%;
   --link-hover-hsl: 153, 47%, 49%;
   --text-primary-hsl: 0deg, 0%, 90%;
+  --text-secondary-hsl: 0deg, 0%, 70%;
   --svg-fill-hsl: 0deg, 0%, 85%;
   --text-gradient: linear-gradient(to right, hsl(278, 74%, 54%), hsl(197, 75%, 47%));
 }
@@ -144,6 +124,30 @@ li {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* Media Queries */
+/* TODO animate buttons, transitions, etc */
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Some people hate this feature */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  canvas {
+    display: none;
+  }
+}
+
+@media (prefers-contrast: no-preference) {
+  .text-infernal {
+    color: hsl(120, 100%, 50%);
+    text-shadow: 0 0 0.2rem hsl(120, 100%, 50%), 0 0 0.5rem hsl(120, 100%, 50%),
+      0 0 0.8rem hsl(120, 100%, 50%);
+  }
 }
 
 @media (hover: hover) {

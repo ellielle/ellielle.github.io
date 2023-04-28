@@ -1,12 +1,13 @@
 import { nunito, sacramento } from "@utils/load-fonts";
 
+// TODO refactor metadata into importable sections
 export const metadata = {};
 
 const fancyCapitals = (letter: string) => {
   return <span className={[sacramento.className, "text-4xl"].join(" ")}>{letter}</span>;
 };
 
-const ShortBlurb = () => {
+const ShortBlurb = (): JSX.Element => {
   return (
     <div className="text-left">
       <h1 className="mt-6 text-2xl"></h1>
@@ -22,11 +23,11 @@ const ShortBlurb = () => {
   );
 };
 
-const About = () => {
+const About = (): JSX.Element => {
   return (
-    <main>
-      <article className={[nunito.className, "mx-[10%]"].join(" ")}>
-        <p className="mt-8 text-xl">
+    <main className="px-8 flex flex-col">
+      <article className={[nunito.className, "md:mx-[8%]"].join(" ")}>
+        <p className="text-xl">
           {fancyCapitals("L")}isten, traveler, for I have traversed the varied realms of software
           development for nigh on two decades. It began with humble origins; simple incantations of
           HTML and CSS. In my 12th summer, I was taken under the wing of a number of masters of the
@@ -53,6 +54,8 @@ const About = () => {
           needed for hire, I offer them freely to a not-for-profit guild in my homeland.
         </p>
       </article>
+
+      <hr className="place-self-center w-[80%] mt-12 border-gray-600"/>
     </main>
   );
 };

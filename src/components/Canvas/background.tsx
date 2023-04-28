@@ -6,7 +6,7 @@ import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import { particleOptions } from "../../app/model/particles";
 
-const Background = () => {
+const Background = (): JSX.Element => {
   const particleInit = useCallback(async (engine: Engine) => {
     // console.log(engine);
     await loadFull(engine);

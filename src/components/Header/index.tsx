@@ -18,7 +18,7 @@ const navigationMenu = menu.map(([url, text]) => {
   );
 });
 
-const Header = () => {
+const Header = (): JSX.Element => {
   return (
     <header className="grid content-center w-20 h-[3rem] top-0 left-0 bg-header">
       <nav className="h-[100%] w-[100%] flex justify-evenly md:w-[80%] place-self-center">

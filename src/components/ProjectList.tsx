@@ -2,7 +2,7 @@ import Image from "next/image";
 import Card from "@components/Card";
 import { projectList, Project } from "@/src/app/model/skillset";
 
-const ProjectList = ({ filterSelected = false }: { filterSelected: boolean }) => {
+const ProjectList = ({ filterSelected = false }: { filterSelected: boolean }): JSX.Element => {
   let list: JSX.Element[] = [];
   let mappableList: Project[] = [];
 
@@ -20,7 +20,7 @@ const ProjectList = ({ filterSelected = false }: { filterSelected: boolean }) =>
           alt={project.imageAlt}
           width={1794}
           height={946}
-          className="justify-items-center h-auto w-max-[30%]"
+          className="justify-items-center rounded-lg"
           priority
         />
       </Card>
