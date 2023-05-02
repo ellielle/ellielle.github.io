@@ -23,7 +23,7 @@ export const socialMedia = [
   // { Component: Discord, url: "" },
   // { Component: Twitter, url: "" },
 ].map(({ Component, url }, index) => (
-  <Link href={url} key={`${Component.name}-${index}`}>
+  <a href={url} target="_blank" rel="noreferrer" key={`${Component.name}-${index}`}>
     <Component />
-  </Link>
+  </a>
 ));
