@@ -31,7 +31,7 @@ const debounce = (func: Function, wait: number) => {
 };
 
 const Header = (): JSX.Element => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [previousY, setPreviousY] = useState(0);
 
   useEffect(() => {
@@ -53,10 +53,10 @@ const Header = (): JSX.Element => {
     }
   }, [previousY]);
 
-  const headerStyle = isOpen ? "opacity-100" : "opacity-0";
+  const headerStyle = isOpen ? "opacity-100 md:header" : "opacity-0";
 
   return (
-    <header className={`${headerStyle} sticky top-0 left-0 z-[11] flex content-center h-[3rem] md:mx-[16%] px-8 mb-8`}>
+    <header className={`${headerStyle} sticky top-0 left-0 z-[11] flex content-center h-[3rem] md:mx-[16%] px-8 mb-8 rounded-md`}>
       <nav className="h-full w-full gap-8 hidden place-self-center items-center md:flex">
         {navigationMenu}
       </nav>
