@@ -18,7 +18,7 @@ const projectList: Project[] = [
     name: "Templio",
     description: "Easy framework starter templates.",
     stack: ["Node.js", "Vue.js", "Nuxt", "React", "Next.js"],
-    url: "https://github.com/ellielle/",
+    url: "https://github.com/ellielle/templio",
     image: otl,
     imageAlt: "Templio's github page",
     select: true,

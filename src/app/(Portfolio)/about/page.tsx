@@ -14,10 +14,12 @@ const ShortBlurb = (): JSX.Element => {
       <p>
         In my youth, I dabbled in the dark arts of programming, honing my skills with simple
         incantations of HTML and CSS on Geocities. Soon, I discovered the realm of{" "}
-        <a href="https://www.graalonline.com/">Graal Online</a>, where I delved deeper into the
-        arcane. I came under the tutelage of a group of masters of the craft, who taught me the
-        basics of the ancient tongue of C++. I used this knowledge to weave code into the very
-        fabric of the world.
+        <em>
+          <a href="https://www.graalonline.com/">Graal Online</a>
+        </em>
+        , where I delved deeper into the arcane. I came under the tutelage of a group of masters of
+        the craft, who taught me the basics of the ancient tongue of C++. I used this knowledge to
+        weave code into the very fabric of the world.
       </p>
     </div>
   );
@@ -48,14 +50,15 @@ const About = (): JSX.Element => {
           deeper into the secrets this &#39;web&#39; holds.
         </p>
         <p className="mt-8 text-xl">
-          {fancyCapitals("N")}ow, I roam the land as a wandering <span className="text-name font-bold text-2xl">CSSorceress</span>, offering my skills to
+          {fancyCapitals("N")}ow, I roam the land as a wandering{" "}
+          <span className="text-name font-bold text-2xl">CSSorceress</span>, offering my skills to
           those in need. From small-scale charms to large serverless rituals that call upon multiple
           APIs, I am always eager to push the boundaries of my craft. And when my skills are not
           needed for hire, I offer them freely to a not-for-profit guild in my homeland.
         </p>
       </article>
 
-      <hr className="place-self-center w-[80%] mt-12 border-gray-600"/>
+      <hr className="place-self-center w-[80%] mt-12 border-gray-600" />
     </main>
   );
 };

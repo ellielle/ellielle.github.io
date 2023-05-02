@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import ProjectList from "@components/ProjectList";
+import ProjectList from "./ProjectList";
 
 const Projects = ({ filtered }: { filtered: boolean }): JSX.Element => {
   return (
