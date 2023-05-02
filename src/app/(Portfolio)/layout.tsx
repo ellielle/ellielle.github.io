@@ -2,6 +2,7 @@ import { inter } from "@utils/load-fonts";
 import { sharedMetadata } from "@utils/shared-metadata";
 import dynamic from "next/dynamic";
 import Header from "@components/Header";
+import Construction from "@components/Construction";
 const Background = dynamic(() => import("@components/Canvas/background"));
 import "./globals.css";
 
@@ -14,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
         className={[inter.className, "max-w-[1280px] sm:mx-[5%] min-[1400px]:mx-auto"].join(" ")}>
         <Header />
         <div className="sm:opacity-mask">{children}</div>
+        <Construction />
         <Background />
       </body>
     </html>
