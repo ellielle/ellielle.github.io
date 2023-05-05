@@ -43,7 +43,7 @@ const Header = (): JSX.Element => {
       setIsOpen(true);
     }
     previousY.current = currentY;
-  }, 100), [previousY.current]);
+  }, 200), [previousY.current]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -58,7 +58,7 @@ const Header = (): JSX.Element => {
   const headerStyle = isOpen ? "top-0" : "top-[-4rem]";
 
   return (
-    <header className={`${headerStyle} sticky left-0 z-[11] flex content-center h-[3rem] md:mx-[16%] md:header md:header px-8 mb-8 rounded-md`}>
+    <header className={`${headerStyle} duration-300 ease-in-out sticky left-0 z-[11] flex content-center h-[3rem] md:mx-[16%] md:header md:header px-8 mb-8 rounded-md`}>
       <nav className="h-full w-full gap-8 hidden place-self-center items-center md:flex">
         {navigationMenu}
       </nav>
