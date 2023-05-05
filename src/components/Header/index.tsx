@@ -3,7 +3,7 @@
 // import { useEffect } from "react";
 import Link from "next/link";
 import Social from "@components/Logos/Social";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 
 const menu: Array<[string, string]> = [
   ["/", "Home"],
@@ -31,19 +31,21 @@ const debounce = (func: Function, wait: number) => {
 };
 
 const Header = (): JSX.Element => {
+  console.log('renderererer')
   const [isOpen, setIsOpen] = useState(true);
-  const [previousY, setPreviousY] = useState(0);
+  const previousY = useRef(0);
+
+  const handleScroll = useCallback(debounce(() => {
+    const currentY = window.scrollY;
+    if (currentY > previousY.current) {
+      setIsOpen(false);
+    } else {
+      setIsOpen(true);
+    }
+    previousY.current = currentY;
+  }, 100), [previousY.current]);
 
   useEffect(() => {
-    const handleScroll = debounce(() => {
-      const currentY = window.scrollY;
-      if (currentY > previousY) {
-        setIsOpen(false);
-      } else {
-        setIsOpen(true);
-      }
-      setPreviousY(currentY);
-    }, 400);
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("touchmove", handleScroll);
 
@@ -53,10 +55,10 @@ const Header = (): JSX.Element => {
     }
   }, [previousY]);
 
-  const headerStyle = isOpen ? "opacity-100 md:header" : "opacity-0";
+  const headerStyle = isOpen ? "top-0" : "top-[-4rem]";
 
   return (
-    <header className={`${headerStyle} sticky top-0 left-0 z-[11] flex content-center h-[3rem] md:mx-[16%] px-8 mb-8 rounded-md`}>
+    <header className={`${headerStyle} sticky left-0 z-[11] flex content-center h-[3rem] md:mx-[16%] md:header md:header px-8 mb-8 rounded-md`}>
       <nav className="h-full w-full gap-8 hidden place-self-center items-center md:flex">
         {navigationMenu}
       </nav>
