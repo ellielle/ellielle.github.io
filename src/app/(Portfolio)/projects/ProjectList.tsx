@@ -4,16 +4,13 @@ import { projectList, Project } from "@/src/app/model/skillset";
 
 const ProjectList = ({ filterSelected = false }: { filterSelected: boolean }): JSX.Element => {
   let list: JSX.Element[] = [];
-  let mappableList: Project[] = [];
+  let mappableList: Project[] = filterSelected
+    ? projectList.filter((project) => project.select)
+    : projectList;
 
-  if (filterSelected) {
-    mappableList = projectList.filter((project) => project.select);
-  } else {
-    mappableList = projectList;
-  }
-
-  list = mappableList.map((project) => {
-    return (
+  for (let i = 0; i < mappableList.length; i++) {
+    const project = mappableList[i];
+    list.push(
       <Card key={project.name} project={project}>
         {/* <Image
           src={project.image}
@@ -25,8 +22,7 @@ const ProjectList = ({ filterSelected = false }: { filterSelected: boolean }): J
         /> */}
       </Card>
     );
-  });
-  // TODO see if returning an actual element is better
+  }
   return <>{list}</>;
 };
 

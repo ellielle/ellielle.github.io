@@ -14,7 +14,7 @@
     width: 50%;
     justify-self: center;
     text-align: center;
-    padding: 2rem 0;
+    margin: 2rem 0;
     border-radius: 0.5rem;
     box-shadow: 0 0 0.5rem hsla(0, 0%, 61%, 0.5);
   }
