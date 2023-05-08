@@ -17,6 +17,16 @@
     margin: 2rem 0;
     border-radius: 0.5rem;
     box-shadow: 0 0 0.5rem hsla(0, 0%, 61%, 0.5);
+    transition: all 0.5s ease-in-out;
+    transform: rotate(var(--card-container-rotation));
+  }
+
+  .card-container:nth-child(odd) {
+    --card-container-rotation: -7deg;
+  }
+
+  .card-container:nth-child(even) {
+    --card-container-rotation: 7deg;
   }
 
   .svg-logo {
@@ -159,12 +169,16 @@ a {
   }
 }
 
-@media (hover: hover) {
+@media (prefers-reduced-motion: no-preference) and (hover: hover) {
   /* TODO link hover animations */
   .svg-logo:hover {
     /* TODO add more interesting animation */
     transition: all 0.5s ease-in-out;
     filter: brightness(1.5);
+  }
+
+  .card-container:hover {
+    transform: rotate(-(var(--card-container-rotation)));
   }
 
   nav a,
