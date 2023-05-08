@@ -20,13 +20,16 @@ const navigationMenu = menu.map(([url, text]) => {
   );
 });
 
-const debounce = (func: Function, wait: number) => {
-  let timeout: NodeJS.Timeout;
+const throttle = (callback: () => void, delay: number) => {
+  let throttling = false;
   return (...args: any[]) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => {
-      func(...args);
-    }, wait);
+    if (!throttling) {
+      throttling = true;
+      setTimeout(() => {
+        throttling = false;
+        callback();
+      }, delay);
+    }
   };
 };
 
@@ -34,15 +37,18 @@ const Header = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(true);
   const previousY = useRef(0);
 
-  const handleScroll = useCallback(debounce(() => {
-    const currentY = window.scrollY;
-    if (currentY > previousY.current) {
-      setIsOpen(false);
-    } else {
-      setIsOpen(true);
-    }
-    previousY.current = currentY;
-  }, 200), [previousY.current]);
+  const handleScroll = useCallback(
+    throttle(() => {
+      const currentY = window.scrollY;
+      if (currentY > previousY.current) {
+        setIsOpen(false);
+      } else {
+        setIsOpen(true);
+      }
+      previousY.current = currentY;
+    }, 200),
+    [previousY.current]
+  );
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -51,13 +57,14 @@ const Header = (): JSX.Element => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("touchmove", handleScroll);
-    }
+    };
   }, [previousY]);
 
   const headerStyle = isOpen ? "top-0" : "top-[-4rem]";
 
   return (
-    <header className={`${headerStyle} duration-300 ease-in-out sticky left-0 z-[11] flex content-center h-[3rem] md:mx-[16%] md:header md:header px-8 mb-8 rounded-md`}>
+    <header
+      className={`${headerStyle} duration-300 ease-in-out sticky left-0 z-[11] flex content-center h-[3rem] md:mx-[16%] md:header md:header px-8 mb-8 rounded-md`}>
       <nav className="h-full w-full gap-8 hidden place-self-center items-center md:flex">
         {navigationMenu}
       </nav>
