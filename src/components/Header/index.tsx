@@ -31,7 +31,6 @@ const debounce = (func: Function, wait: number) => {
 };
 
 const Header = (): JSX.Element => {
-  console.log('renderererer')
   const [isOpen, setIsOpen] = useState(true);
   const previousY = useRef(0);
 
