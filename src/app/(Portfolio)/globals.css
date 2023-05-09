@@ -40,6 +40,10 @@
     fill: hsl(var(--svg-fill-hsl));
   }
 
+  .svg-logo:hover {
+    filter: brightness(1.5);
+  }
+
   .svg-logo-contact {
     height: 1.5rem;
     width: auto;
@@ -161,6 +165,10 @@ a {
 @media (prefers-reduced-motion: reduce) {
   canvas {
     display: none;
+  }
+
+  nav a, header li {
+    @apply opacity-50 hover:opacity-100;
   }
 }
 
