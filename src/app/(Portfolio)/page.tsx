@@ -7,7 +7,7 @@ import { ShortBlurb } from "./about/page";
 const Home = (): JSX.Element => {
   return (
     <main className="px-8">
-      <div className="md:mx-[8%]">
+      <div className="md:mx-[8%] pb-8">
         <section className="text-left grid">
           <div>
             <h1 className="text-3xl">

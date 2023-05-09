@@ -31,7 +31,7 @@
 
   .card-container:nth-child(3) > .card-image {
     --card-container-rotation: -70deg;
-    filter: blur(100px);
+    filter: blur(50px);
   }
 
   .svg-logo {
