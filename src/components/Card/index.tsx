@@ -11,22 +11,24 @@ const Card = ({
 }): JSX.Element => {
   const { url, name, description, stack } = project;
   return (
-    <div className="card-container flex flex-col gap-2 w-[90%] h-full md:w-[50%] bg-transparent shadow-lg rounded-lg overflow-hidden transform rotate-[-7deg] hover:rotate-[0deg] transition-all duration-300 border-2 border-black">
+    <div className="card-container flex flex-col gap-2 w-[90%] h-full md:w-[50%] bg-transparent shadow-lg rounded-lg overflow-hidden border-2 border-black">
       <div className="card-image">{children}</div>
-      <div className="card-body p-3">
-        <div className="card-title font-bold text-white text-lg">
+      <div className="p-3">
+        <div className="font-bold text-white text-lg">
           <a
             href={url}
             target="_blank"
             rel="noreferrer"
-            className="text-blue-400 hover:text-blue-200">
+            className="text-white cursor-pointer hover:text-cyan-600 transition-all ease-in-out duration-500">
             {name}
           </a>
         </div>
-        <div className="card-text text-gray-400 text-sm">{description}</div>
+        <div className="mt-3 text-gray-400 text-sm">{description}</div>
       </div>
-      <div className="card-footer border-t-1 border-black text-sm text-gray-400">
-        <div className="card-stack text-white text-sm mt-2">{stack.join(" ")}</div>
+      <div className="text-white text-sm mt-2">
+        {stack.map((item) => (
+          <span className="px-2">{item + " "}</span>
+        ))}
       </div>
     </div>
   );

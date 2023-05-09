@@ -68,7 +68,6 @@ const Header = (): JSX.Element => {
       <nav className="h-full w-full gap-8 hidden place-self-center items-center md:flex">
         {navigationMenu}
       </nav>
-      {/* TODO MOBILE NAV COMPONENT */}
       <div className="h-full w-full place-content-end gap-8 place-self-center items-center hidden md:flex">
         <Social />
       </div>

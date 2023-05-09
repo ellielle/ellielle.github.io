@@ -4,7 +4,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        infernal: "hsl(120, 100%, 50%)",
         "text-primary-dark": "hsl(0, 0%, 90%)",
         "text-secondary-dark": "hsl(0, 0%, 70%)",
       },

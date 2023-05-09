@@ -29,12 +29,15 @@
     --card-container-rotation: 7deg;
   }
 
+  .card-container:nth-child(3) > .card-image {
+    --card-container-rotation: -70deg;
+    filter: blur(100px);
+  }
+
   .svg-logo {
     height: 3.3rem;
     width: auto;
     fill: hsl(var(--svg-fill-hsl));
-    transform-style: preserve-3d;
-    will-change: transform;
   }
 
   .svg-logo-contact {
