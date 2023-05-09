@@ -34,7 +34,6 @@ const throttle = (callback: () => void, delay: number) => {
 };
 
 const Header = (): JSX.Element => {
-  console.log("render");
   const [isOpen, setIsOpen] = useState(true);
   const previousY = useRef(0);
 
