@@ -7,11 +7,10 @@ const ProjectList = ({ filterSelected = false }: { filterSelected: boolean }): J
   let mappableList: Project[] = filterSelected
     ? projectList.filter((project) => project.select)
     : projectList;
-
-  for (let i = 0; i < mappableList.length; i++) {
-    const project = mappableList[i];
-    list.push(
-      <Card key={project.name} project={project}>
+  
+    list = mappableList.map((project) => {
+      return (
+        <Card key={project.name} project={project}>
         <Image
           src={project.image}
           alt={project.imageAlt}
@@ -21,8 +20,8 @@ const ProjectList = ({ filterSelected = false }: { filterSelected: boolean }): J
           priority
         />
       </Card>
-    );
-  }
+      );
+    });
   return <>{list}</>;
 };
 

@@ -34,11 +34,12 @@ const throttle = (callback: () => void, delay: number) => {
 };
 
 const Header = (): JSX.Element => {
+  console.log("render");
   const [isOpen, setIsOpen] = useState(true);
   const previousY = useRef(0);
 
-  const handleScroll = useCallback(
-    throttle(() => {
+  const handleScroll = throttle(
+    useCallback(() => {
       const currentY = window.scrollY;
       if (currentY > previousY.current) {
         setIsOpen(false);
@@ -46,8 +47,8 @@ const Header = (): JSX.Element => {
         setIsOpen(true);
       }
       previousY.current = currentY;
-    }, 200),
-    [previousY.current]
+    }, []),
+    900
   );
 
   useEffect(() => {
@@ -58,7 +59,7 @@ const Header = (): JSX.Element => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("touchmove", handleScroll);
     };
-  }, [previousY]);
+  }, [handleScroll]);
 
   const headerStyle = isOpen ? "top-0" : "top-[-4rem]";
 

@@ -26,8 +26,10 @@ const Card = ({
         <div className="mt-3 text-gray-400 text-sm">{description}</div>
       </div>
       <div className="text-white text-sm mt-2">
-        {stack.map((item) => (
-          <span className="px-2">{item + " "}</span>
+        {stack.map((item, index) => (
+          <span className="px-2" key={`${item}-${index}`}>
+            {item + " "}
+          </span>
         ))}
       </div>
     </div>
