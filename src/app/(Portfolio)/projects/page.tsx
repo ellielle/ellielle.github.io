@@ -4,7 +4,6 @@ import ProjectList from "./ProjectList";
 const Projects = ({ filtered }: { filtered: boolean }): JSX.Element => {
   return (
     <Fragment>
-      {/* TODO use a different style card/container? */}
       <ProjectList filterSelected={filtered} />
     </Fragment>
   );

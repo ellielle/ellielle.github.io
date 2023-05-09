@@ -42,7 +42,6 @@ const Home = (): JSX.Element => {
 
         <section className="text-center text-xl mt-20 pb-12">
           <h2>Some of the things I&#39;ve worked on</h2>
-          {/* TODO refactor grid to not be jank on some devices */}
           <div className="mt-8 grid grid-cols-1 gap-10">
             <Projects filtered={true} />
           </div>

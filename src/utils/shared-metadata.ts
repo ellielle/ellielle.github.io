@@ -1,8 +1,6 @@
 import { Metadata } from "next";
 
 // TODO replace lazy metadata
-// TODO add favicon
-// TODO add og:image
 // TODO either add the built-in support for a sitemap or double-check the plugin's sitemap
 export const sharedMetadata: Metadata = {
   metadataBase: new URL("https://noellelamour.vercel.app/"),
