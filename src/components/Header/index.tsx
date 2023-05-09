@@ -47,7 +47,7 @@ const Header = (): JSX.Element => {
       }
       previousY.current = currentY;
     }, []),
-    900
+    400
   );
 
   useEffect(() => {
@@ -64,7 +64,7 @@ const Header = (): JSX.Element => {
 
   return (
     <header
-      className={`${headerStyle} duration-300 ease-in-out sticky left-0 z-[11] flex content-center h-[3rem] md:mx-[16%] md:header md:header px-8 mb-8 rounded-md`}>
+      className={`${headerStyle} duration-300 ease-in-out sticky left-0 z-[11] flex content-center h-[3rem] md:mx-[16%] md:header px-8 mb-8 rounded-md`}>
       <nav className="h-full w-full gap-8 hidden place-self-center items-center md:flex">
         {navigationMenu}
       </nav>

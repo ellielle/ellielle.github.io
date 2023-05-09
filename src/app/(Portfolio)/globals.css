@@ -61,7 +61,7 @@
   }
 
   .header {
-    background-color: hsla(230, 25%, 5%, 0.6);
+    background-color: hsla(230, 23%, 5%, 0.6);
     box-shadow: 0 0 0.5rem hsla(0, 0%, 61%, 0.5);
   }
 }
@@ -70,24 +70,14 @@
 
 :root {
   /* TODO create light mode scheme, make dark mode default (swap to main root) */
-  --font-mono: "Fira Code", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace",
-    "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-  --font-sans: Inter, "Trebuchet MS", -system-ui, Helvetica, Verdana, sans-serif;
-  --bg-primary-hsl: 255deg, 6%, 13%;
-  --bg-secondary-hsl: 255deg, 6%, 13%;
-  --link-hover-hsl: 153, 47%, 49%;
   --text-primary-hsl: 0deg, 0%, 90%;
-  --text-secondary-hsl: 0deg, 0%, 70%;
   --svg-fill-hsl: 0deg, 0%, 85%;
   --text-gradient: linear-gradient(to right, hsl(278, 74%, 54%), hsl(197, 75%, 47%));
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg-primary-hsl: 0deg, 0%, 100%;
-    --bg-secondary-hsl: 255deg, 6%, 49%;
-    --link-hover-hsl: 153deg, 47%, 49%;
     --text-primary-hsl: 0deg, 2%, 12%;
     --svg-fill-hsl: 0deg, 2%, 12%;
     --text-gradient: linear-gradient(to right, hsl(212, 74%, 54%), hsl(49, 98%, 51%));
@@ -167,7 +157,10 @@ a {
     display: none;
   }
 
-  nav a, header li {
+  nav a,
+  header li,
+  footer .svg-logo-contact,
+  .footer-text {
     @apply opacity-50 hover:opacity-100;
   }
 }
@@ -182,7 +175,8 @@ a {
 
 @media (prefers-reduced-motion: no-preference) and (hover: hover) {
   /* TODO link hover animations */
-  .svg-logo:hover {
+  .svg-logo:hover,
+  .svg-logo-contact:hover {
     /* TODO add more interesting animation */
     transition: all 0.5s ease-in-out;
     filter: brightness(1.5);
@@ -193,7 +187,9 @@ a {
   }
 
   nav a,
-  header li {
+  header li,
+  footer .svg-logo-contact,
+  .footer-text {
     @apply transition-opacity opacity-50 hover:opacity-100;
   }
 }
