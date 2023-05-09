@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import Projects from "./projects/page";
 import Tech from "@components/Logos/Tech";
@@ -31,7 +32,9 @@ const Home = (): JSX.Element => {
         <section className="text-xl mb-20 grid">
           <ShortBlurb />
           <div className="mt-14 mr-14 text-right">
-            <Link href="/about" className="text-infernal">More About Me --&#62;</Link>
+            <Link href="/about" className="text-infernal">
+              More About Me --&#62;
+            </Link>
           </div>
         </section>
 

@@ -14,16 +14,6 @@ interface Project {
 
 const projectList: Project[] = [
   {
-    // TODO change project name
-    name: "Templio",
-    description: "Easy framework starter templates.",
-    stack: ["Node.js", "Vue.js", "Nuxt", "React", "Next.js"],
-    url: "https://github.com/ellielle/templio",
-    image: otl,
-    imageAlt: "Templio's github page",
-    select: true,
-  },
-  {
     name: "VinceOTL",
     description: "A web app for a Twitch streamer to track his backlog progress.",
     stack: ["Nuxt", "Vue.js", "Vuetify", "Netlify", "FaunaDB"],
@@ -39,6 +29,15 @@ const projectList: Project[] = [
     url: "https://www.historicberkeley.org/",
     image: bchs,
     imageAlt: "Berkeley County Historical Society's website.",
+    select: true,
+  },
+  {
+    name: "Templio",
+    description: "Easy framework starter templates.",
+    stack: ["Node.js", "Vue.js", "Nuxt", "React", "Next.js"],
+    url: "https://github.com/ellielle/templio",
+    image: otl,
+    imageAlt: "Templio's github page",
     select: true,
   },
 ];
