@@ -2,10 +2,8 @@ import type { MetadataRoute } from "next";
 
 // TODO update sitemap when pages are complete
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/about"].map((route) => ({
-    url: `https://noellelamour.vercel.app${route}`,
-    lastModified: new Date(),
-  }));
-
-  return [...routes];
+  return [
+    { url: "https://noellelamour.vercel.app/", lastModified: new Date() },
+    { url: "https://noellelamour.vercel.app/about", lastModified: new Date() },
+  ];
 }
