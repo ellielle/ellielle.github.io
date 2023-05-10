@@ -31,15 +31,15 @@ const projectList: Project[] = [
     imageAlt: "Berkeley County Historical Society's website.",
     select: true,
   },
-  {
-    name: "Templio",
-    description: "Easy framework starter templates.",
-    stack: ["Node.js", "Vue.js", "Nuxt", "React", "Next.js"],
-    url: "https://github.com/ellielle/templio",
-    image: otl,
-    imageAlt: "Templio's github page",
-    select: true,
-  },
+  // {
+  //   name: "Templio",
+  //   description: "Easy framework starter templates.",
+  //   stack: ["Node.js", "Vue.js", "Nuxt", "React", "Next.js"],
+  //   url: "https://github.com/ellielle/templio",
+  //   image: otl,
+  //   imageAlt: "Templio's github page",
+  //   select: true,
+  // },
 ];
 
 const skillSet = [
