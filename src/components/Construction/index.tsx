@@ -13,7 +13,7 @@ const Construction = (): JSX.Element => {
 
   return (
     <div
-      className={`${notificationVisible} card-container header z-10 transition-all absolute w-full top-0 left-0 md:w-auto md:top-auto md:left-auto md:fixed md:bottom-12 md:right-6 px-4 cursor-pointer`}
+      className={`${notificationVisible} card-container header z-10 transition-all fixed w-full top-0 left-0 md:w-auto md:top-auto md:left-auto md:bottom-12 md:right-6 px-4 cursor-pointer`}
       onClick={dismissNotification}>
       <p>
         🚧Under construction🚧. Click to dismiss.

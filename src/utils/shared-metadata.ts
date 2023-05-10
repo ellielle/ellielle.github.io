@@ -1,7 +1,8 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 // TODO replace lazy metadata
 // TODO either add the built-in support for a sitemap or double-check the plugin's sitemap
+// TODO maybe split metadata into importable chunks
 export const sharedMetadata: Metadata = {
   metadataBase: new URL("https://noellelamour.vercel.app/"),
   title: {
@@ -9,6 +10,10 @@ export const sharedMetadata: Metadata = {
     default: "Noelle L'Amour",
   },
   description: "Full-stack Developer",
+  other: {
+    custom: "meta",
+    "google-site-verification": "pT0tr8qa4dd8GQR-SwLSyuag8A_dzwo2UJE0TmXDjCs",
+  },
   themeColor: [
     { media: "(prefers-color-scheme: dark)", color: "#1b2836" },
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
