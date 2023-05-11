@@ -76,12 +76,14 @@
   --text-gradient: linear-gradient(to right, hsl(278, 74%, 54%), hsl(197, 75%, 47%));
 }
 
+/* TODO disable until light theme is implemented
 @media (prefers-color-scheme: light) {
   :root {
     --text-primary-hsl: 0deg, 2%, 12%;
     --svg-fill-hsl: 0deg, 2%, 12%;
     --text-gradient: linear-gradient(to right, hsl(212, 74%, 54%), hsl(49, 98%, 51%));
   }
+*/
 
   .background-animation {
     display: none;
