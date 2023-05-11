@@ -83,12 +83,11 @@
     --svg-fill-hsl: 0deg, 2%, 12%;
     --text-gradient: linear-gradient(to right, hsl(212, 74%, 54%), hsl(49, 98%, 51%));
   }
-*/
-
   .background-animation {
     display: none;
   }
 }
+*/
 
 *,
 *::before,
