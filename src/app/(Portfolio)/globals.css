@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+@layer components {
   .text-name {
     background: var(--text-gradient);
     -webkit-background-clip: text;

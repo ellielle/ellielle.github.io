@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Social from "@components/Logos/Social";
 
 const Footer = () => {
   return (
@@ -12,8 +11,8 @@ const Footer = () => {
         <a href="#">
           <s>Projects</s>
         </a>
-        <a href="#">
-          <s>Blog</s>
+        <a href="/blog">
+          Blog
         </a>
       </nav>
 
