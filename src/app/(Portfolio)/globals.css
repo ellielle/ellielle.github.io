@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@Layer base {
+  canvas {
+    position: fixed;
+  }
+}
+
 @layer components {
   .text-name {
     background: var(--text-gradient);
