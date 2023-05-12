@@ -1,5 +1,11 @@
 import { inter } from "@utils/load-fonts";
-import { sharedMetadata } from "@utils/shared-metadata";
+import {
+  sharedMetadata,
+  customMetadata,
+  openGraphMetadata,
+  robotsMetadata,
+  twitterMetadata,
+} from "@utils/shared-metadata";
 import dynamic from "next/dynamic";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
@@ -7,7 +13,13 @@ import Construction from "@components/Construction";
 const Background = dynamic(() => import("@components/Canvas/background"));
 import "./globals.css";
 
-export const metadata = { ...sharedMetadata };
+export const metadata = {
+  ...sharedMetadata,
+  ...customMetadata,
+  ...openGraphMetadata,
+  ...robotsMetadata,
+  ...twitterMetadata,
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }): JSX.Element {
   return (

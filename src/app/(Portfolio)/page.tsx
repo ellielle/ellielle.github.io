@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import Link from "next/link";
 import Projects from "./projects/page";
 import Tech from "@components/Logos/Tech";
