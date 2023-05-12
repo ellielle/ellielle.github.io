@@ -7,7 +7,7 @@ export const openGraphMetadata: Metadata = {
   openGraph: {
     title: "Noelle L'Amour's Fantastical Portfolio",
     description: "Your Next Developer",
-    siteName: "A Neat Portfolio",
+    siteName: "Noelle L'Amour - 🪄 A Story of Intrigue 🪄",
     type: "website",
     locale: "en_US",
     url: "https://noellelamour.vercel.app/",
@@ -31,7 +31,7 @@ export const twitterMetadata: Metadata = {
   },
 };
 
-export const customMetadata: Metadata = {
+export const googleMetadata: Metadata = {
   other: {
     custom: "meta",
     "google-site-verification": "pT0tr8qa4dd8GQR-SwLSyuag8A_dzwo2UJE0TmXDjCs",
@@ -53,10 +53,22 @@ export const robotsMetadata: Metadata = {
 export const sharedMetadata: Metadata = {
   metadataBase: new URL("https://noellelamour.vercel.app/"),
   title: {
-    template: "%s | Noelle L'Amour",
-    default: "Noelle L'Amour",
+    template: "%s | Noelle L'Amour 🪄",
+    default: "Noelle L'Amour 🪄",
   },
   description: "Full-stack Developer",
+  keywords: [
+    "noelle",
+    "lamour",
+    "l\u0027amour",
+    "javascript",
+    "typescript",
+    "web developer",
+    "react",
+    "vue",
+    "nuxt",
+    "nextjs",
+  ],
   themeColor: [
     { media: "(prefers-color-scheme: dark)", color: "#1b2836" },
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },

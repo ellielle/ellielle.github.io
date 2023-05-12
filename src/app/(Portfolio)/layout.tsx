@@ -1,7 +1,7 @@
 import { inter } from "@utils/load-fonts";
 import {
   sharedMetadata,
-  customMetadata,
+  googleMetadata,
   openGraphMetadata,
   robotsMetadata,
   twitterMetadata,
@@ -15,7 +15,7 @@ import "./globals.css";
 
 export const metadata = {
   ...sharedMetadata,
-  ...customMetadata,
+  ...googleMetadata,
   ...openGraphMetadata,
   ...robotsMetadata,
   ...twitterMetadata,

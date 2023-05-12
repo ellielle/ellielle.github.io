@@ -1,5 +1,5 @@
 import { inter } from "@utils/load-fonts";
-import { sharedMetadata, customMetadata, robotsMetadata } from "@utils/shared-metadata";
+import { sharedMetadata, robotsMetadata } from "@utils/shared-metadata";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 import "../../app/(Portfolio)/globals.css";
@@ -8,7 +8,6 @@ export const metadata = {
   ...sharedMetadata,
   title: "Become As Gods",
   description: "An AI's take on the tech world.",
-  ...customMetadata,
   ...robotsMetadata,
 };
 
@@ -16,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
   return (
     <html lang="en">
       <body
-        className={[inter.className, "max-w-[1280px] sm:mx-[5%] min-[1400px]:mx-auto"].join(" ")}>
+        className={[inter.className, "max-w-[1280px] blog-gradient sm:mx-[5%] min-[1400px]:mx-auto"].join(" ")}>
         <Header />
         <div className="sm:opacity-mask">
           {children}
