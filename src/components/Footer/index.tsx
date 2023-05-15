@@ -1,8 +1,22 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 const Footer = () => {
+  const path = usePathname();
+
+  const getBackgroundColor = (path: string) => {
+    if (path === "/blog") {
+      return "bg-[#111111ff]";
+    } else {
+      return "bg-[#010b10aa]";
+    }
+  };
+
   return (
-    <footer className="grid grid-cols-[1fr,1fr] md:grid-cols-[1fr,1fr] bg-[#010b10aa]">
+    <footer className={`grid grid-cols-[1fr,1fr] md:grid-cols-[1fr,1fr] ${getBackgroundColor(path)}`}>
       <nav className="flex flex-col py-4 pl-8 w-full place-items-center md:pr-8 md:place-items-end">
         <Link href="/">
           <strong className="text-xl">Home</strong>
@@ -11,9 +25,7 @@ const Footer = () => {
         <a href="#">
           <s>Projects</s>
         </a>
-        <a href="/blog">
-          Blog
-        </a>
+        <a href="/blog">Blog</a>
       </nav>
 
       <div className="flex flex-col py-4 pr-8 w-full h-full place-items-center md:pl-8 md:place-items-start">

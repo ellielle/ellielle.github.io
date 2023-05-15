@@ -70,10 +70,6 @@
     background-color: hsla(230, 23%, 5%, 0.6);
     box-shadow: 0 0 0.5rem hsla(0, 0%, 61%, 0.5);
   }
-
-  .blog-gradient {
-    background: radial-gradient(ellipse at bottom, hsl(211, 33%, 16%) 0%, hsl(230, 25%, 5%) 100%);
-  }
 }
 
 /* TODO move some common css to tailwind config */

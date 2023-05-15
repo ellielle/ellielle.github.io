@@ -4,7 +4,7 @@ import { useCallback } from "react";
 import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
-import { particleOptions } from "../../app/model/particles";
+import { particleOptions } from "@/src/models/particles";
 
 const Background = (): JSX.Element => {
   const particleInit = useCallback(async (engine: Engine) => {

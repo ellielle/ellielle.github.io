@@ -1,6 +1,6 @@
 "use client";
 
-import type { Project } from "@/src/app/model/skillset";
+import type { Project } from "@/src/models/skillset";
 
 const Card = ({
   children,

@@ -11,7 +11,7 @@ import Header from "@components/Header";
 import Footer from "@components/Footer";
 import Construction from "@components/Construction";
 const Background = dynamic(() => import("@components/Canvas/background"));
-import "./globals.css";
+import "@assets/styles/globals.css";
 
 export const metadata = {
   ...sharedMetadata,

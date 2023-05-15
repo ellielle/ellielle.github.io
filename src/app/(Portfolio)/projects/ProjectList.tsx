@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Card from "@components/Card";
-import { projectList, Project } from "@/src/app/model/skillset";
+import { projectList, Project } from "@/src/models/skillset";
 
 const ProjectList = ({ filterSelected = false }: { filterSelected: boolean }): JSX.Element => {
   let list: JSX.Element[] = [];
