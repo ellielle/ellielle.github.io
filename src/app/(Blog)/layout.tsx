@@ -2,7 +2,7 @@ import { inter } from "@utils/load-fonts";
 import { sharedMetadata, robotsMetadata } from "@utils/shared-metadata";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
-import "../../app/(Portfolio)/globals.css";
+import "@assets/styles/blog.css";
 
 export const metadata = {
   ...sharedMetadata,
@@ -15,7 +15,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
   return (
     <html lang="en">
       <body
-        className={[inter.className, "max-w-[1280px] blog-gradient sm:mx-[5%] min-[1400px]:mx-auto"].join(" ")}>
+        className={[
+          inter.className,
+          "max-w-[1280px]sm:mx-[5%] min-[1400px]:mx-auto",
+        ].join(" ")}>
         <Header />
         <div className="sm:opacity-mask">
           {children}

@@ -2,11 +2,8 @@ const Blog = (): JSX.Element => {
   // TODO fetch blog posts, blog0 should always be shown on the initial page
   return (
     <main className="px-8 blog-gradient">
-      <div className="md:mx-[8%] pb-8">
-        <h1 className="text-4xl">AI Stuff</h1>
-        <div className="mb-10">
-          <p></p>
-        </div>
+      <div className="md:mx-[8%]">
+        <h1 className="text-4xl"></h1>
       </div>
     </main>
   );
