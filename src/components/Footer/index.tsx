@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
 
 const Footer = () => {
   const path = usePathname();
@@ -22,10 +21,10 @@ const Footer = () => {
           <strong className="text-xl">Home</strong>
         </Link>
         <Link href="/about">About</Link>
-        <a href="#">
+        <Link href="#">
           <s>Projects</s>
-        </a>
-        <a href="/blog">Blog</a>
+        </Link>
+        <Link href="/blog">Blog</Link>
       </nav>
 
       <div className="flex flex-col py-4 pr-8 w-full h-full place-items-center md:pl-8 md:place-items-start">

@@ -9,7 +9,7 @@ const menu: Array<[string, string]> = [
   ["/", "Home"],
   ["/about", "About"],
   // ["/projects", "Projects"],
-  // ["/blog", "Blog"],
+  ["/blog", "Blog"],
 ];
 
 const navigationMenu = menu.map(([url, text]) => {

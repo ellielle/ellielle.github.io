@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
       <body
         className={[
           inter.className,
-          "max-w-[1280px]sm:mx-[5%] min-[1400px]:mx-auto",
+          "max-w-[1280px] sm:mx-[5%] min-[1400px]:mx-auto",
         ].join(" ")}>
         <Header />
         <div className="sm:opacity-mask">
