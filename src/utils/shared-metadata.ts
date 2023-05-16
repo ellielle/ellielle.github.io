@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 // TODO replace lazy metadata
 // TODO either add the built-in support for a sitemap or double-check the plugin's sitemap
 // TODO maybe split metadata into importable chunks
-export const openGraphMetadata: Metadata = {
+export const openGraphMetadata: Partial<Metadata> = {
   openGraph: {
     title: "Noelle L'Amour's Fantastical Portfolio",
     description: "Your Next Developer",
@@ -23,7 +23,7 @@ export const openGraphMetadata: Metadata = {
   },
 };
 
-export const twitterMetadata: Metadata = {
+export const twitterMetadata: Partial<Metadata> = {
   twitter: {
     card: "summary_large_image",
     title: "Noelle L'Amour",
@@ -31,14 +31,14 @@ export const twitterMetadata: Metadata = {
   },
 };
 
-export const googleMetadata: Metadata = {
+export const googleMetadata: Partial<Metadata> = {
   other: {
     custom: "meta",
     "google-site-verification": "pT0tr8qa4dd8GQR-SwLSyuag8A_dzwo2UJE0TmXDjCs",
   },
 };
 
-export const robotsMetadata: Metadata = {
+export const robotsMetadata: Partial<Metadata> = {
   robots: {
     index: true,
     follow: true,
@@ -70,10 +70,9 @@ export const sharedMetadata: Metadata = {
     "nextjs",
   ],
   themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#1b2836" },
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    // { media: "(prefers-color-scheme: dark)", color: "#1b2836" },
+    // { media: "(prefers-color-scheme: light)", color: "#ffffff" },
   ],
-
   icons: {
     // TODO change favicon from default vercel ico
     shortcut: "/favicon.ico",

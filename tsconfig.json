@@ -41,10 +41,10 @@
       ],
       "@assets/*": [
         "./src/assets/*"
-      ],
-      "@hooks/*": [
-        "./src/hooks/*"
       ]
+      // "@hooks/*": [
+      //   "./src/hooks/*"
+      // ]
     }
   },
   "include": [
