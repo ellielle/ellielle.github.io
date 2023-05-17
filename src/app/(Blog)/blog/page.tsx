@@ -1,16 +1,25 @@
+import type { BlogPostFormat } from "@blog/content";
+// TODO THIS IS BLOG
+
+// async function getPosts() {
+//   const response = await fetch("http://localhost:3000/blog/api");
+//   const posts: BlogPostFormat[] = await response.json();
+//   console.log("posts work, blog/page");
+//   return posts.map((post) => ({
+//     slug: post.title.split(" ", 7).join("-"),
+//     data: post,
+//   }));
+// }
+
 const Blog = () => {
-  console.log("posts");
-  // TODO fetch blog posts, blog should always be shown on the initial page
   return (
     <main className="px-8 blog-gradient">
       <div className="md:mx-[8%]">
-        <h1 className="text-4xl">hi</h1>
+        <h1 className="text-4xl">BLOG</h1>
       </div>
     </main>
   );
 };
-
-// FIXME see if there's a better way to import JSON files into nextjs, or maybe use the route handlers?
 
 export default Blog;
 
