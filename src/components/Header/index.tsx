@@ -1,6 +1,5 @@
 "use client";
 
-// import { useEffect } from "react";
 import Link from "next/link";
 import Social from "@components/Logos/Social";
 import { useState, useEffect, useCallback, useRef } from "react";

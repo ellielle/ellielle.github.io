@@ -7,7 +7,7 @@ const Footer = () => {
   const path = usePathname();
 
   const getBackgroundColor = (path: string) => {
-    if (path === "/blog") {
+    if (path.match(/\/blog/) || path.match(/\/blog\/[a-zA-Z0-9]+/)) {
       return "bg-[#111111ff]";
     } else {
       return "bg-[#010b10aa]";
