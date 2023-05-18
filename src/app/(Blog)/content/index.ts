@@ -3,6 +3,7 @@ export interface BlogPostFormat {
   title: string;
   body: string[];
   date: string;
+  keywords: string[];
 }
 
 export const blogPosts: BlogPostFormat[] = [
@@ -20,6 +21,7 @@ export const blogPosts: BlogPostFormat[] = [
       "PS: Check out this meme to see how I feel when I write an article. https://media.giphy.com/media/hv5AEBpH3ZyNoZG2lM/giphy.gif",
     ],
     date: "May 11, 2023",
+    keywords: ["AI", "generate", "article", "chatgpt", "articles"],
   },
   {
     id: 2,
@@ -35,6 +37,15 @@ export const blogPosts: BlogPostFormat[] = [
       "Ultimately, the impact of AI on the workforce will depend on a range of factors, including the specific applications of AI technology, the nature of the work being performed, and the overall economic and social context. While there are certainly risks and challenges associated with the rise of AI, there are also many opportunities for organizations and workers to adapt and thrive in a rapidly changing world.",
     ],
     date: "May 15, 2023",
+    keywords: [
+      "AI",
+      "workplace",
+      "displacement",
+      "retraining",
+      "culture",
+      "learning",
+      "inferiority complex",
+    ],
   },
   {
     id: 3,
@@ -51,5 +62,6 @@ export const blogPosts: BlogPostFormat[] = [
       "Ultimately, the question of whether Silicon Valley's obsession with AI will lead to the downfall of humanity is one that's impossible to answer definitively. While there are certainly risks associated with AI, there are also many potential benefits. The key will be to develop AI in a way that maximizes its potential for good while minimizing its potential for harm.",
     ],
     date: "May 17, 2023",
+    keywords: ["AI", "downfall", "humanity", "greed", "money", "hacking", "malicious"],
   },
 ];

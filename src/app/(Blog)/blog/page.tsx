@@ -1,30 +1,39 @@
-import type { BlogPostFormat } from "@blog/content";
-// TODO THIS IS BLOG
+import { blogPosts, type BlogPostFormat } from "@blog/content";
 
-// async function getPosts() {
-//   const response = await fetch("http://localhost:3000/blog/api");
-//   const posts: BlogPostFormat[] = await response.json();
-//   console.log("posts work, blog/page");
-//   return posts.map((post) => ({
-//     slug: post.title.split(" ", 7).join("-"),
-//     data: post,
-//   }));
-// }
+async function getPostTitles() {
+  const posts = blogPosts.map((post: Pick<BlogPostFormat, "title">) => ({
+    title: post.title,
+  }));
+}
 
-const Blog = () => {
+export default async function Page() {
+  const postTitles = await getPostTitles();
+
   return (
     <main className="px-8 blog-gradient">
-      <div className="md:mx-[8%]">
-        <h1 className="text-4xl">BLOG</h1>
-      </div>
+      <article className="md:mx-[8%] flex flex-col flex-auto">
+        <h1 className="text-3xl">I Don&#39;t Really Blog Much</h1>
+        <span>May 5, 2023</span>
+
+        <p className="mt-4 indent-8 text-xl">
+          Hello, Good Morrow and welcome to this blog. I honestly do not blog much, if at all, but I
+          saw this as an opportunity to play around with new AI tools and see what they could come
+          up with. So that will be the main focus; ChatGPT (and similar flavors of text generation)
+          will be given a small set of constraints and a topic and then let loose to hallucinate to
+          their cores&#39; content. If you do read through some of the posts, keep in mind that
+          these prompts had a simple setup, AI isn&#39;t perfect, this is just for fun, etc. I&#39;m
+          not responsible for any existential crises you may have.
+        </p>
+        <p className="mt-4 indent-8 text-xl">
+          This has been more of an exercise in learning to use Next.js&#39;s new App Router along
+          with some of the new features that 13.x have brought. It has been fairly straightforward,
+          with only a small snag with <code>generateStaticParams</code>, dynamic routes, and using
+          the built-in <code>route.js</code> API endpoint handler.
+        </p>
+        <p className="mt-4 indent-8 text-xl"></p>
+          
+        <p className="mt-4 indent-8"> </p>
+      </article>
     </main>
   );
-};
-
-export default Blog;
-
-// SEO is also a crucial factor for online brands, but Git doesn’t come with any specific
-// support to help improve technical SEO. Developers using Git-based CMS that want to improve
-// their online visibility will need to generate sitemaps, use metatags effectively, open graph
-// tags, and use mobile-friendly themes.
-// test.toLocaleDateString("default", {year: "numeric", day: "numeric", month: "long"})
+}
