@@ -1,16 +1,22 @@
+import Link from "next/link";
 import { blogPosts, type BlogPostFormat } from "@blog/content";
 
 async function getPostTitles() {
-  const posts = blogPosts.map((post: Pick<BlogPostFormat, "title">) => ({
+  return blogPosts.map((post: Pick<BlogPostFormat, "title" | "date">) => ({
     title: post.title,
+    date: post.date,
   }));
+}
+
+function getSlug(title: string) {
+  return encodeURIComponent(title.toLowerCase().split(" ", 7).join("-"));
 }
 
 export default async function Page() {
   const postTitles = await getPostTitles();
 
   return (
-    <main className="px-8 blog-gradient">
+    <main className="px-12 blog-gradient grid md:grid-cols-[4fr,1fr]">
       <article className="md:mx-[8%] flex flex-col flex-auto">
         <h1 className="text-3xl">I Don&#39;t Really Blog Much</h1>
         <span>May 5, 2023</span>
@@ -31,9 +37,21 @@ export default async function Page() {
           the built-in <code>route.js</code> API endpoint handler.
         </p>
         <p className="mt-4 indent-8 text-xl"></p>
-          
+
         <p className="mt-4 indent-8"> </p>
       </article>
+      {/* TODO Gussy it up, only show 4 most recent posts */}
+      <aside className="md:mx-[8%] flex flex-col">
+        {postTitles.map((post) => (
+          <Link href={`/blog/${getSlug(post.title)}`} key={post.title}>
+            <h3
+              key={`${post.title}-${post.title.length}`}
+              className="underline hover:cursor-pointer mb-8">
+              {post.title}
+            </h3>
+          </Link>
+        ))}
+      </aside>
     </main>
   );
 }

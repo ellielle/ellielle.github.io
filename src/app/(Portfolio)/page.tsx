@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Projects from "./projects/page";
 import Tech from "@components/Logos/Tech";
 import { ShortBlurb } from "./about/page";
 import { FilteredProjects } from "./projects/page";

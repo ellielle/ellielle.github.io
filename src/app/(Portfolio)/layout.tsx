@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { inter } from "@utils/load-fonts";
 import {
   sharedMetadata,
@@ -32,7 +33,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
           <Footer />
         </div>
         <Construction />
-        <Background />
+        <Suspense fallback={null}>
+          <Background />
+        </Suspense>
       </body>
     </html>
   );
