@@ -28,13 +28,18 @@ export const techStacks = [
 ].map((Component, index) => <Component key={`${Component.name}-${index}`} />);
 
 export const socialMedia = [
-  { Component: Email, url: "mailto:noelle.a.lamour@gmail.com" },
-  { Component: LinkedIn, url: "https://www.linkedin.com/in/nlamour/" },
-  { Component: GitHub, url: "https://github.com/ellielle" },
+  { Component: Email, url: "mailto:noelle.a.lamour@gmail.com", alt: "Email" },
+  { Component: LinkedIn, url: "https://www.linkedin.com/in/nlamour/", alt: "LinkedIn" },
+  { Component: GitHub, url: "https://github.com/ellielle", alt: "GitHub" },
   // { Component: Discord, url: "" },
   // { Component: Twitter, url: "" },
-].map(({ Component, url }, index) => (
-  <a href={url} target="_blank" rel="noreferrer" key={`${Component.name}-${index}`}>
+].map(({ Component, url, alt }, index) => (
+  <a
+    href={url}
+    target="_blank"
+    rel="noreferrer"
+    aria-label={alt}
+    key={`${Component.name}-${index}`}>
     <Component />
   </a>
 ));
