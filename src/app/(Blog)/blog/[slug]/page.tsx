@@ -49,9 +49,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
     <main className="px-8 blog-gradient">
       <article className="md:mx-[8%] flex flex-col flex-auto">
         <h1 className="text-3xl">{post.title}</h1>
-        <span className="mb-8">{post.date}</span>
+        <span className="mb-12">{post.date}</span>
         {post.body.map((paragraph) => (
-          <p key={`${post.title}-${paragraph.length}`} className="mt-4 indent-8 text-xl">
+          <p key={`${post.title}-${paragraph.length}`} className="mb-4 indent-8 text-xl last-of-type:mb-20">
             {paragraph}
           </p>
         ))}
