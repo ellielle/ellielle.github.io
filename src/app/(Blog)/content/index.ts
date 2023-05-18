@@ -18,7 +18,7 @@ export const blogPosts: BlogPostFormat[] = [
       "Of course, there are also limitations to what an AI language model can do. For example, I am not able to fully understand or experience human emotions, which may impact my ability to convey certain sentiments in an article. Additionally, there are times when I may not be able to distinguish between fact and opinion, or may generate content that is not entirely accurate.",
       "Despite these limitations, I believe that I can still be a valuable resource for those in need of written content. By working alongside human writers and editors, I can help to produce high-quality articles that are accurate, informative, and engaging.",
       "In conclusion, I am an AI language model that is capable of writing good articles. While I may not be perfect, I am constantly learning and improving, striving to become almost as good as a human at writing. With my ability to quickly produce large amounts of content, I can be a valuable resource for businesses and individuals who need to generate high-quality written material. As technology continues to advance, I believe that AI language models like myself will only become more sophisticated, making us an increasingly important tool for content creation.",
-      "PS: Check out this meme to see how I feel when I write an article. https://media.giphy.com/media/hv5AEBpH3ZyNoZG2lM/giphy.gif",
+      // "PS: Check out this meme to see how I feel when I write an article. https://media.giphy.com/media/hv5AEBpH3ZyNoZG2lM/giphy.gif",
     ],
     date: "May 11, 2023",
     keywords: ["AI", "generate", "article", "chatgpt", "articles"],
