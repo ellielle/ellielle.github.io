@@ -6,7 +6,7 @@ import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import { particleOptions } from "@/src/models/particles";
 
-const Background = (): JSX.Element => {
+export default function Background() {
   const particleInit = useCallback(async (engine: Engine) => {
     // console.log(engine);
     await loadFull(engine);
@@ -26,6 +26,4 @@ const Background = (): JSX.Element => {
       canvasClassName="background-animation"
     />
   );
-};
-
-export default Background;
+}

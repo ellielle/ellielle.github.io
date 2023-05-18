@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import ProjectList from "./ProjectList";
 
-const Projects = ({ filtered }: { filtered: boolean }): JSX.Element => {
+const FilteredProjects = ({ filtered }: { filtered: boolean }): JSX.Element => {
   return (
     <Fragment>
       <ProjectList filterSelected={filtered} />
@@ -9,4 +9,8 @@ const Projects = ({ filtered }: { filtered: boolean }): JSX.Element => {
   );
 };
 
-export default Projects;
+export default function Page({ params }: { params: { filtered: boolean } }) {
+  return <div></div>;
+}
+
+export { FilteredProjects };

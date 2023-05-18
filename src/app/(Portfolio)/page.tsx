@@ -2,8 +2,9 @@ import Link from "next/link";
 import Projects from "./projects/page";
 import Tech from "@components/Logos/Tech";
 import { ShortBlurb } from "./about/page";
+import { FilteredProjects } from "./projects/page";
 
-const Home = (): JSX.Element => {
+export default function Page() {
   return (
     <main className="px-8">
       <div className="md:mx-[8%] pb-8">
@@ -42,12 +43,10 @@ const Home = (): JSX.Element => {
         <section className="text-center text-xl mt-20 pb-12">
           <h2>Some of the things I&#39;ve worked on</h2>
           <div className="mt-8 grid grid-cols-1 gap-10">
-            <Projects filtered={true} />
+            <FilteredProjects filtered={true} />
           </div>
         </section>
       </div>
     </main>
   );
-};
-
-export default Home;
+}

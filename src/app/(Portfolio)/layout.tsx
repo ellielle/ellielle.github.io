@@ -10,7 +10,7 @@ import dynamic from "next/dynamic";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 import Construction from "@components/Construction";
-const Background = dynamic(() => import("@components/Canvas/background"));
+const Background = dynamic(() => import("@components/Canvas/"));
 import "@assets/styles/globals.css";
 
 export const metadata = {

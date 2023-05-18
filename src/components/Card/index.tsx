@@ -2,13 +2,13 @@
 
 import type { Project } from "@/src/models/skillset";
 
-const Card = ({
+export default function Card({
   children,
   project,
 }: {
   children: React.ReactNode;
   project: Project;
-}): JSX.Element => {
+}) {
   const { url, name, description, stack } = project;
   return (
     <div className="card-container flex flex-col gap-2 w-[90%] h-full md:w-[50%] bg-transparent shadow-lg rounded-lg overflow-hidden border-2 border-black">
@@ -34,6 +34,4 @@ const Card = ({
       </div>
     </div>
   );
-};
-
-export default Card;
+}

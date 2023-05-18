@@ -1,4 +1,4 @@
-const Loading = (): JSX.Element => {
+export default function Loading() {
   return (
     <div className="grid justify-center items-center">
       <svg xmlns="http://www.w3.org/2000/svg" className="svg-logo" viewBox="0 0 24 24">
@@ -20,6 +20,4 @@ const Loading = (): JSX.Element => {
       </svg>
     </div>
   );
-};
-
-export default Loading;
+}

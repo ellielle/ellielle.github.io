@@ -32,7 +32,7 @@ const throttle = (callback: () => void, delay: number) => {
   };
 };
 
-const Header = (): JSX.Element => {
+export default function Header() {
   const [isOpen, setIsOpen] = useState(true);
   const previousY = useRef(0);
 
@@ -72,6 +72,4 @@ const Header = (): JSX.Element => {
       </div>
     </header>
   );
-};
-
-export default Header;
+}

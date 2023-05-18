@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const Footer = () => {
+export default function Footer() {
   const path = usePathname();
 
   const getBackgroundColor = (path: string) => {
@@ -15,7 +15,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className={`grid grid-cols-[1fr,1fr] md:grid-cols-[1fr,1fr] ${getBackgroundColor(path)}`}>
+    <footer
+      className={`grid grid-cols-[1fr,1fr] md:grid-cols-[1fr,1fr] ${getBackgroundColor(path)}`}>
       <nav className="flex flex-col py-4 pl-8 w-full place-items-center md:pr-8 md:place-items-end">
         <Link href="/">
           <strong className="text-xl">Home</strong>
@@ -49,6 +50,4 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

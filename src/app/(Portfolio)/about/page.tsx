@@ -1,13 +1,20 @@
 import { nunito, sacramento } from "@utils/load-fonts";
+import { sharedMetadata, robotsMetadata } from "@utils/shared-metadata";
+import type { Metadata } from "next";
 
-// TODO refactor metadata into importable sections
-export const metadata = {};
+// TODO confirm metadata
+export const metadata: Metadata = {
+  ...sharedMetadata,
+  title: "About",
+  description: "My Glorious Tale",
+  ...robotsMetadata
+};
 
 const fancyCapitals = (letter: string) => {
   return <span className={[sacramento.className, "text-4xl"].join(" ")}>{letter}</span>;
 };
 
-const ShortBlurb = (): JSX.Element => {
+export function ShortBlurb() {
   return (
     <div className="text-left">
       <h1 className="mt-6 text-2xl"></h1>
@@ -23,9 +30,9 @@ const ShortBlurb = (): JSX.Element => {
       </p>
     </div>
   );
-};
+}
 
-const About = (): JSX.Element => {
+export default function Page() {
   return (
     <main className="px-8 flex flex-col">
       <article className={[nunito.className, "md:mx-[8%]"].join(" ")}>
@@ -61,7 +68,4 @@ const About = (): JSX.Element => {
       <hr className="place-self-center w-[80%] mt-12 border-gray-600" />
     </main>
   );
-};
-
-export { ShortBlurb };
-export default About;
+}
