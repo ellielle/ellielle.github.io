@@ -26,9 +26,13 @@ export default async function Page() {
           saw this as an opportunity to play around with new AI tools and see what they could come
           up with. So that will be the main focus; ChatGPT (and similar flavors of text generation)
           will be given a small set of constraints and a topic and then let loose to hallucinate to
-          their cores&#39; content. If you do read through some of the posts, keep in mind that
-          these prompts had a simple setup, AI isn&#39;t perfect, this is just for fun, etc. I&#39;m
-          not responsible for any existential crises you may have.
+          their cores&#39; content.
+        </p>
+        <p className="mt-4 indent-8 text-xl">
+          If you do read through some of the posts, keep in mind that I&#39;ve been using fairly
+          simple prompts about current events or just a topic that pops into my head. AI isn&#39;t
+          perfect, this is just for fun, etc. I&#39;m not responsible for any existential crises or
+          hurt feelings you may have.
         </p>
         <p className="mt-4 indent-8 text-xl">
           This has been more of an exercise in learning to use Next.js&#39;s new App Router along
