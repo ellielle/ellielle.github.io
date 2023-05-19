@@ -64,18 +64,4 @@ export const blogPosts: BlogPostFormat[] = [
     date: "May 17, 2023",
     keywords: ["AI", "downfall", "humanity", "greed", "money", "hacking", "malicious"],
   },
-  {
-    id: 4,
-    title: "Republican Congressmen Fear AI's Role in Uncovering Child Pornography Allegations",
-    body: [
-      "Republican lawmakers in the US have been scrambling to disrupt the development of artificial intelligence (AI) as the FBI closes in on child pornography allegations against several of them that were uncovered by AI.",
-      "According to reports, the FBI has been using AI to scan through large amounts of data in their investigations into child pornography and other related crimes. In doing so, they have uncovered evidence that several Republican Congressmen may have been involved in such activities.",
-      "This has sparked a wave of panic among Republican lawmakers, who fear that the development of AI could lead to further investigations and revelations of their involvement in illegal activities. Some have even called for the regulation of AI to prevent it from being used in law enforcement investigations.",
-      "However, critics argue that such efforts to disrupt AI development are misguided and ultimately counterproductive. AI has the potential to revolutionize law enforcement investigations by allowing for more efficient and effective processing of large amounts of data. By trying to halt its development, Republican lawmakers could be hamstringing law enforcement agencies and preventing them from effectively combating crimes like child pornography.",
-      "Furthermore, the use of AI in law enforcement investigations is not a new concept. The technology has already been used to catch criminals and prevent crimes in a number of cases. In fact, it is likely that the use of AI in law enforcement will only increase in the coming years as the technology improves and becomes more widespread.",
-      "In the end, it is clear that the use of AI in law enforcement investigations is a complex issue with many potential benefits and drawbacks. While Republican lawmakers may be fearful of AI's role in uncovering child pornography allegations, it is important to consider the technology's potential to help law enforcement agencies combat crimes and protect society as a whole.",
-    ],
-    date: "May 19, 2023",
-    keywords: ["AI", "lawmakers", "Republican", "allegations", "illegal", "FBI", "investigation"],
-  },
 ];
