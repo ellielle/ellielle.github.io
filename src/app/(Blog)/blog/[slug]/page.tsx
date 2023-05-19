@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 function getSlug(title: string) {
-  return encodeURIComponent(title.toLowerCase().replace(/\'/g, "%27").split(" ", 7).join("-"));
+  return encodeURIComponent(title.toLowerCase().replace(/\'/g, "-").split(" ", 7).join("-"));
 }
 
 async function getPost(postSlug: string): Promise<BlogPostFormat | undefined> {
@@ -19,7 +19,7 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const posts = await Promise.resolve(Object.values(blogPosts));
 
   return posts.map(({ title }) => ({
-    slug: getSlug(title),
+    slug: decodeURIComponent(getSlug(title)),
   }));
 }
 
