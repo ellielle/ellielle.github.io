@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 function getSlug(title: string) {
-  return encodeURIComponent(title.toLowerCase().split(" ", 7).join("-"));
+  return encodeURIComponent(title.toLowerCase().replace(/\'/g, "%27").split(" ", 7).join("-"));
 }
 
 async function getPost(postSlug: string): Promise<BlogPostFormat | undefined> {
@@ -51,7 +51,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <h1 className="text-3xl">{post.title}</h1>
         <span className="mb-12">{post.date}</span>
         {post.body.map((paragraph) => (
-          <p key={`${post.title}-${paragraph.length}`} className="mb-4 indent-8 text-xl last-of-type:mb-20">
+          <p
+            key={`${post.title}-${paragraph.length}`}
+            className="mb-4 indent-8 text-xl last-of-type:mb-20">
             {paragraph}
           </p>
         ))}

@@ -9,7 +9,7 @@ async function getPostTitles() {
 }
 
 function getSlug(title: string) {
-  return encodeURIComponent(title.toLowerCase().split(" ", 7).join("-"));
+  return encodeURIComponent(title.toLowerCase().replace(/\'/g, "%27").split(" ", 7).join("-"));
 }
 
 export default async function Page() {
