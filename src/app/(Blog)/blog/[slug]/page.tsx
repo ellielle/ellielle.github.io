@@ -1,7 +1,8 @@
-import { BlogPostFormat, blogPosts } from "@blog/content";
-import { sharedMetadata, robotsMetadata } from "@utils/shared-metadata";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { BlogPostFormat, blogPosts } from "@blog/content";
+import { sharedMetadata, robotsMetadata } from "@utils/shared-metadata";
 
 function getSlug(title: string) {
   return encodeURIComponent(title.toLowerCase().replace(/\'/g, "-").split(" ", 7).join("-"));
@@ -53,10 +54,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
         {post.body.map((paragraph) => (
           <p
             key={`${post.title}-${paragraph.length}`}
-            className="mb-4 indent-8 text-xl last-of-type:mb-20">
+            className="mb-4 indent-8 text-xl last-of-type:mb-12">
             {paragraph}
           </p>
         ))}
+        <Link href="/blog" className="text-center text-xl mb-12 hover:cursor-pointer hover:underline">&#8619; Back</Link>
       </article>
     </main>
   );

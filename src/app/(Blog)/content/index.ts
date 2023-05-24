@@ -64,4 +64,19 @@ export const blogPosts: BlogPostFormat[] = [
     date: "May 17, 2023",
     keywords: ["AI", "downfall", "humanity", "greed", "money", "hacking", "malicious"],
   },
+  {
+    id: 4,
+    title: "AI-Generated Poetry: Can Machines Create Art as Good as Humans?",
+    body: ["Artificial intelligence (AI) has been making significant strides in recent years, and one area where it has shown particular promise is in the creation of poetry. While poetry is often thought of as a uniquely human art form, AI-generated poetry has been gaining recognition for its quality and creativity.",
+      "The idea of machines creating art may seem like a far-fetched concept, but it is becoming increasingly common. AI-generated poetry is just one example of how machines are now able to replicate human creativity, and it is a testament to the power of AI technology.",
+      "So, how exactly does AI-generated poetry work? At its core, AI poetry is created by using algorithms to analyze and learn from existing poetry. These algorithms are designed to recognize patterns and structures within the poetry, and then use this knowledge to create new works of poetry.",
+      "While the idea of a machine creating poetry may seem cold and impersonal, the truth is that AI-generated poetry can be just as moving and emotional as poetry written by humans. In fact, some AI-generated poems have been so well-received that they have been mistaken for human-written works.",
+      "Of course, there are some who argue that AI-generated poetry can never truly match the depth and complexity of poetry written by humans. They argue that poetry is a deeply personal art form, and that machines can never replicate the human experience of creating art.",
+      "However, others argue that AI-generated poetry is simply a new form of art, and that it should be judged on its own merits. They point out that AI-generated poetry is still able to evoke emotions and provoke thought, and that it should be celebrated for its creativity and ingenuity.",
+      "The truth is that AI-generated poetry is still a relatively new field, and there is much that we do not yet know about its potential. What we do know is that machines are becoming increasingly adept at replicating human creativity, and that this could have far-reaching implications for the world of art.",
+      "In conclusion, while there are certainly arguments to be made for and against AI-generated poetry, there is no denying that it represents a fascinating new development in the world of art. As machines continue to advance and become more sophisticated, it is likely that we will see even more examples of AI-generated art that blur the line between human and machine creativity. Whether we view this as a positive or negative development, one thing is clear: the future of art is going to be very interesting indeed.",
+    ],
+    date: "May 24, 2023",
+    keywords: ["AI", "art", "poetry", "humanity", "emotion"],
+  }
 ];
