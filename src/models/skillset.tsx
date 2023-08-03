@@ -1,6 +1,7 @@
 import { StaticImageData } from "next/image";
 import otl from "@/public/otl.png";
 import bchs from "@/public/bchs.png";
+import gw2 from "@/public/gw2.png";
 
 interface Project {
   name: string;
@@ -31,38 +32,16 @@ const projectList: Project[] = [
     imageAlt: "Berkeley County Historical Society's website.",
     select: true,
   },
-  // {
-  //   name: "Templio",
-  //   description: "Easy framework starter templates.",
-  //   stack: ["Node.js", "Vue.js", "Nuxt", "React", "Next.js"],
-  //   url: "https://github.com/ellielle/templio",
-  //   image: otl,
-  //   imageAlt: "Templio's github page",
-  //   select: true,
-  // },
+  {
+    name: "GW2 Dark Mode Wiki",
+    description: "Enables the built-in dark mode theme without requiring logging in.",
+    stack: ["Node.js"],
+    url: "https://github.com/ellielle/gw2-wiki-dark",
+    image: gw2,
+    imageAlt: "GW2 Dark Mode Wiki",
+    select: true,
+  },
 ];
 
-const skillSet = [
-  { name: "JavaScript ES6", url: "" },
-  { name: "TypeScript", url: "" },
-  { name: "Vue.js", url: "" },
-  { name: "Nuxt", url: "" },
-  { name: "Vite", url: "" },
-  { name: "React", url: "" },
-  { name: "Next.js", url: "" },
-  { name: "Jest", url: "" },
-  { name: "Vitest", url: "" },
-  { name: "MSW", url: "" },
-  { name: "Ruby", url: "" },
-  { name: "Rails", url: "" },
-  { name: "GraphQL", url: "" },
-  { name: "FaunaDB", url: "" },
-  { name: "MongoDB", url: "" },
-  { name: "Jamstack", url: "" },
-  { name: "Netlify", url: "" },
-  { name: "Vercel", url: "" },
-  { name: "Prisma", url: "" },
-];
-
-export { skillSet, projectList };
+export { projectList };
 export type { Project };

@@ -1,22 +1,18 @@
 import type { Metadata } from "next";
 
-// TODO replace lazy metadata
-// TODO either add the built-in support for a sitemap or double-check the plugin's sitemap
-// TODO maybe split metadata into importable chunks
 export const openGraphMetadata: Partial<Metadata> = {
   openGraph: {
     title: "Noelle L'Amour's Fantastical Portfolio",
     description: "Your Next Developer",
     siteName: "Noelle L'Amour - 🪄 A Story of Intrigue 🪄",
-    type: "website",
+    type: "profile",
     locale: "en_US",
     url: "https://ellielle.github.io/",
     images: [
       {
-        //  TODO add og:image
-        url: "https://ellielle.github.io/og-image.png",
-        width: 1200,
-        height: 630,
+        url: "https://ellielle.github.io/og-image.webp",
+        width: 1280,
+        height: 640,
         alt: "Noelle L'Amour",
       },
     ],
@@ -27,7 +23,8 @@ export const twitterMetadata: Partial<Metadata> = {
   twitter: {
     card: "summary_large_image",
     title: "Noelle L'Amour",
-    // TODO creator: "",
+    images: "",
+    site: "https://ellielle.github.io",
   },
 };
 
@@ -66,15 +63,16 @@ export const sharedMetadata: Metadata = {
     "web developer",
     "react",
     "vue",
+    "node.js",
     "nuxt",
     "nextjs",
+    "data-driven",
   ],
   themeColor: [
     // { media: "(prefers-color-scheme: dark)", color: "#1b2836" },
     // { media: "(prefers-color-scheme: light)", color: "#ffffff" },
   ],
   icons: {
-    // TODO change favicon from default vercel ico
     shortcut: "/favicon.ico",
   },
 };
