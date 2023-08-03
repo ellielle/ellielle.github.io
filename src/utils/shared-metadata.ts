@@ -31,7 +31,7 @@ export const twitterMetadata: Partial<Metadata> = {
 export const googleMetadata: Partial<Metadata> = {
   other: {
     custom: "meta",
-    "google-site-verification": "pT0tr8qa4dd8GQR-SwLSyuag8A_dzwo2UJE0TmXDjCs",
+    "google-site-verification": "QY8XDeVr6XLAq9zTNtmPWnKeXfeVsRHKrXGnzCk-Kok",
   },
 };
 
