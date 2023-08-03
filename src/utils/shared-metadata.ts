@@ -10,11 +10,11 @@ export const openGraphMetadata: Partial<Metadata> = {
     siteName: "Noelle L'Amour - 🪄 A Story of Intrigue 🪄",
     type: "website",
     locale: "en_US",
-    url: "https://noellelamour.vercel.app/",
+    url: "https://ellielle.github.io/",
     images: [
       {
         //  TODO add og:image
-        url: "https://noellelamour.vercel.app/og-image.png",
+        url: "https://ellielle.github.io/og-image.png",
         width: 1200,
         height: 630,
         alt: "Noelle L'Amour",
@@ -51,7 +51,7 @@ export const robotsMetadata: Partial<Metadata> = {
 };
 
 export const sharedMetadata: Metadata = {
-  metadataBase: new URL("https://noellelamour.vercel.app/"),
+  metadataBase: new URL("https://ellielle.github.io/"),
   title: {
     template: "%s | Noelle L'Amour 🪄",
     default: "Noelle L'Amour 🪄",

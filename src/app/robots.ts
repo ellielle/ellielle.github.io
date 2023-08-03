@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://noellelamour.vercel.app/sitemap.xml",
+    sitemap: "https://ellielle.github.io/sitemap.xml",
   };
 }
