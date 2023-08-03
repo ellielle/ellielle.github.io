@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 
 export const openGraphMetadata: Partial<Metadata> = {
   openGraph: {
-    title: "Noelle L'Amour's Fantastical Portfolio",
+    title: "Noelle L'Amour ",
     description: "Your Next Developer",
-    siteName: "Noelle L'Amour - 🪄 A Story of Intrigue 🪄",
+    siteName: "Noelle L'Amour's Fantastical Portfolio",
     type: "profile",
     locale: "en_US",
     url: "https://ellielle.github.io/",
