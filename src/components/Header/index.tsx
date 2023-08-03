@@ -8,7 +8,7 @@ const menu: Array<[string, string]> = [
   ["/", "Home"],
   ["/about", "About"],
   // ["/projects", "Projects"],
-  ["/blog", "Blog"],
+  ["", "Corpo"],
 ];
 
 const navigationMenu = menu.map(([url, text]) => {

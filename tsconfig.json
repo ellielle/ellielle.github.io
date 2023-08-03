@@ -28,10 +28,7 @@
         "./*"
       ],
       "@app/*": [
-        "./src/app/(Portfolio)/*"
-      ],
-      "@blog/*": [
-        "./src/app/(Blog)/*"
+        "./src/app/*"
       ],
       "@components/*": [
         "./src/components/*"
