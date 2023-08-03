@@ -35,11 +35,6 @@
     --card-container-rotation: 7deg;
   }
 
-  .card-container:nth-child(3) > .card-image {
-    --card-container-rotation: -70deg;
-    filter: blur(50px);
-  }
-
   .svg-logo {
     height: 3.3rem;
     width: auto;

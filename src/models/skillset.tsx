@@ -15,6 +15,15 @@ interface Project {
 
 const projectList: Project[] = [
   {
+    name: "GW2 Dark Mode Wiki",
+    description: "Enables the built-in dark mode theme without requiring logging in.",
+    stack: ["TypeScript", "Vite"],
+    url: "https://addons.mozilla.org/en-US/firefox/addon/gw2-wiki-dark-mode/",
+    image: gw2,
+    imageAlt: "GW2 Dark Mode Wiki",
+    select: true,
+  },
+  {
     name: "VinceOTL",
     description: "A web app for a Twitch streamer to track his backlog progress.",
     stack: ["Nuxt", "Vue.js", "Vuetify", "Netlify", "FaunaDB"],
@@ -30,15 +39,6 @@ const projectList: Project[] = [
     url: "https://www.historicberkeley.org/",
     image: bchs,
     imageAlt: "Berkeley County Historical Society's website.",
-    select: true,
-  },
-  {
-    name: "GW2 Dark Mode Wiki",
-    description: "Enables the built-in dark mode theme without requiring logging in.",
-    stack: ["Node.js"],
-    url: "https://github.com/ellielle/gw2-wiki-dark",
-    image: gw2,
-    imageAlt: "GW2 Dark Mode Wiki",
     select: true,
   },
 ];

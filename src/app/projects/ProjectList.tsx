@@ -14,8 +14,6 @@ export default function ProjectList({ filterSelected = false }: { filterSelected
         <Image
           src={project.image}
           alt={project.imageAlt}
-          width={1794}
-          height={946}
           className="justify-items-center rounded-lg"
           priority
         />
