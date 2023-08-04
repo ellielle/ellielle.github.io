@@ -7,8 +7,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 const menu: Array<[string, string]> = [
   ["/", "Home"],
   ["/about", "About"],
-  // ["/projects", "Projects"],
-  ["", "Corpo"],
+  ["/projects", "Projects"],
 ];
 
 const navigationMenu = menu.map(([url, text]) => {
@@ -46,7 +45,7 @@ export default function Header() {
       }
       previousY.current = currentY;
     }, []),
-    400
+    400,
   );
 
   useEffect(() => {
@@ -63,7 +62,8 @@ export default function Header() {
 
   return (
     <header
-      className={`${headerStyle} duration-300 ease-in-out sticky left-0 z-[11] flex content-center h-[3rem] md:mx-[16%] md:header px-8 mb-8 rounded-md`}>
+      className={`${headerStyle} duration-300 ease-in-out sticky left-0 z-[11] flex content-center h-[3rem] md:mx-[16%] md:header px-8 mb-8 rounded-md`}
+    >
       <nav className="h-full w-full gap-8 hidden place-self-center items-center md:flex">
         {navigationMenu}
       </nav>

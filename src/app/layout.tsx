@@ -10,7 +10,6 @@ import {
 import dynamic from "next/dynamic";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
-import Construction from "@components/Construction";
 const Background = dynamic(() => import("@components/Canvas/"));
 import "@assets/styles/globals.css";
 
@@ -26,13 +25,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
   return (
     <html lang="en">
       <body
-        className={[inter.className, "max-w-[1280px] sm:mx-[5%] min-[1400px]:mx-auto"].join(" ")}>
+        className={[inter.className, "max-w-[1280px] sm:mx-[5%] min-[1400px]:mx-auto"].join(" ")}
+      >
         <Header />
         <div className="sm:opacity-mask">
           {children}
           <Footer />
         </div>
-        <Construction />
         <Suspense fallback={null}>
           <Background />
         </Suspense>

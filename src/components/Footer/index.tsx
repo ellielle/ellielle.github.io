@@ -1,31 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 export default function Footer() {
-  const path = usePathname();
-
-  const getBackgroundColor = (path: string) => {
-    if (path.match(/\/blog/) || path.match(/\/blog\/[a-zA-Z0-9]+/)) {
-      return "bg-[#111111ff]";
-    } else {
-      return "bg-[#010b10aa]";
-    }
-  };
-
   return (
-    <footer
-      className={`grid grid-cols-[1fr,1fr] md:grid-cols-[1fr,1fr] ${getBackgroundColor(path)}`}>
+    <footer className={`grid grid-cols-[1fr,1fr] md:grid-cols-[1fr,1fr] bg-[#010b10aa]`}>
       <nav className="flex flex-col py-4 pl-8 w-full place-items-center md:pr-8 md:place-items-end">
         <Link href="/">
           <strong className="text-xl">Home</strong>
         </Link>
         <Link href="/about">About</Link>
-        <Link href="#">
-          <s>Projects</s>
-        </Link>
-        <Link href="/blog">Blog</Link>
+        <Link href="/projects">Projects</Link>
       </nav>
 
       <div className="flex flex-col py-4 pr-8 w-full h-full place-items-center md:pl-8 md:place-items-start">
@@ -37,14 +22,16 @@ export default function Footer() {
           href="https://www.linkedin.com/in/nlamour/"
           className="footer-text "
           rel="noreferrer"
-          target="_blank">
+          target="_blank"
+        >
           LinkedIn
         </a>
         <a
           href="https://github.com/ellielle"
           className="footer-text"
           rel="noreferrer"
-          target="_blank">
+          target="_blank"
+        >
           GitHub
         </a>
       </div>
