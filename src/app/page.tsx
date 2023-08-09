@@ -39,9 +39,9 @@ export default function Page() {
 
         <Tech />
 
-        <section className="text-center text-xl mt-20 pb-12">
-          <h2>Some of the things I&#39;ve worked on</h2>
-          <div className="mt-8 grid grid-cols-1 gap-10">
+        <section className="text-center text-xl mt-24 pb-12">
+          <h2>Some of the things I&#39;ve worked on:</h2>
+          <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 gap-10">
             <FilteredProjects filtered={true} />
           </div>
         </section>

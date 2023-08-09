@@ -15,34 +15,34 @@
     -webkit-text-fill-color: transparent;
   }
 
+  .badge {
+    font-size: 0.9rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid hsla(0, 0%, 61%, 0.5);
+    background: radial-gradient(ellipse at bottom, hsl(211, 25%, 16%) 0%, hsl(230, 25%, 5%) 150%);
+  }
+
   .card-container {
     display: grid;
-    width: 50%;
+    /* width: 50%; */
     justify-self: center;
     text-align: center;
-    margin: 2rem 0;
+    /* margin: 2rem 0; */
     border-radius: 0.5rem;
-    box-shadow: 0 0 0.5rem hsla(0, 0%, 61%, 0.5);
+    box-shadow: 0.2rem 0.2rem 0.5rem hsla(230, 25%, 5%, 0.5);
     transition: all 0.5s ease-in-out;
-    transform: rotate(var(--card-container-rotation));
-  }
-
-  .card-container:nth-child(odd) {
-    --card-container-rotation: -7deg;
-  }
-
-  .card-container:nth-child(even) {
-    --card-container-rotation: 7deg;
+    background: radial-gradient(
+      ellipse at bottom,
+      hsla(230, 25%, 5%, 0.5) 0%,
+      hsla(211, 25%, 16%, 0.5) 100%
+    );
   }
 
   .svg-logo {
     height: 3.3rem;
     width: auto;
     fill: hsl(var(--svg-fill-hsl));
-  }
-
-  .svg-logo:hover {
-    filter: brightness(1.5);
   }
 
   .svg-logo-contact {
@@ -63,11 +63,9 @@
 
   .header {
     background-color: hsla(230, 23%, 5%, 0.6);
-    box-shadow: 0 0 0.5rem hsla(0, 0%, 61%, 0.5);
+    box-shadow: 0.2rem 0.2rem 0.5rem hsla(230, 25%, 5%, 0.5);
   }
 }
-
-/* TODO move some common css to tailwind config */
 
 :root {
   /* TODO create light mode scheme, make dark mode default (swap to main root) */
@@ -102,6 +100,7 @@ html {
   line-height: 1.5;
   font-size: 100%;
   overflow-x: hidden;
+  overscroll-behavior-y: none;
 }
 
 body {
@@ -114,8 +113,8 @@ main {
   min-height: 100vh;
 }
 
-main,
-body {
+html,
+main {
   background: radial-gradient(ellipse at bottom, hsl(211, 33%, 16%) 0%, hsl(230, 25%, 5%) 100%);
 }
 
@@ -140,10 +139,10 @@ a {
 }
 
 /* Media Queries */
-/* TODO animate buttons, transitions, etc */
+/* TODO animate transitions, etc */
 
 @media (prefers-reduced-motion: no-preference) {
-  /* Some people hate this feature */
+  /* Some people hate this feature, use only for those with no preference set */
   html {
     scroll-behavior: smooth;
   }
@@ -175,16 +174,10 @@ a {
 }
 
 @media (prefers-reduced-motion: no-preference) and (hover: hover) {
-  /* TODO link hover animations */
   .svg-logo:hover,
   .svg-logo-contact:hover {
-    /* TODO add more interesting animation */
     transition: all 0.5s ease-in-out;
-    filter: brightness(1.5);
-  }
-
-  .card-container:hover {
-    transform: rotate(-(var(--card-container-rotation)));
+    filter: grayscale(80%);
   }
 
   nav a,
