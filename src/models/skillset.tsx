@@ -1,7 +1,8 @@
 import { StaticImageData } from "next/image";
-import otl from "@/public/otl.png";
-import bchs from "@/public/bchs.png";
-import gw2 from "@/public/gw2.png";
+import otl from "@/public/otl.webp";
+import bchs from "@/public/bchs.webp";
+import gw2 from "@/public/gw2.webp";
+import portfolio from "@/public/nl.webp";
 
 interface Project {
   name: string;
@@ -24,9 +25,18 @@ const projectList: Project[] = [
     select: true,
   },
   {
+    name: "Portfolio",
+    description: "This portfolio.",
+    stack: ["React", "TypeScript", "Next.js"],
+    url: "https://github.com/ellielle/ellielle.github.io",
+    image: portfolio,
+    imageAlt: "Noelle L'`Amour's portfolio",
+    select: false,
+  },
+  {
     name: "VinceOTL",
     description: "A web app for a Twitch streamer to track his backlog progress.",
-    stack: ["Nuxt", "Vue.js", "Vuetify", "Netlify", "FaunaDB"],
+    stack: ["Vue.js", "Nuxt", "Vuetify", "FaunaDB"],
     url: "https://vinceotl.netlify.app",
     image: otl,
     imageAlt: "VinceOTL's front page",
@@ -39,7 +49,7 @@ const projectList: Project[] = [
     url: "https://www.historicberkeley.org/",
     image: bchs,
     imageAlt: "Berkeley County Historical Society's website.",
-    select: true,
+    select: false,
   },
 ];
 
