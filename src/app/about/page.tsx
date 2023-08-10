@@ -7,11 +7,17 @@ export const metadata: Metadata = {
   ...sharedMetadata,
   title: "About",
   description: "My Glorious Tale",
-  ...robotsMetadata
+  ...robotsMetadata,
 };
 
 const fancyCapitals = (letter: string) => {
   return <span className={[sacramento.className, "text-4xl"].join(" ")}>{letter}</span>;
+};
+
+const getYeOldeDate = () => {
+  const theNow = new Date(Date.now()).getFullYear();
+  const theThen = 2018;
+  return theNow - theThen;
 };
 
 export function ShortBlurb() {
@@ -66,6 +72,28 @@ export default function Page() {
       </article>
 
       <hr className="place-self-center w-[80%] mt-12 border-gray-600" />
+
+      <article className={[nunito.className, "md:mx-[8%] mt-8"].join(" ")}>
+        <p className="text-xl">
+          {fancyCapitals("I")}n plain English: I&#39;ve been fascinated with programming since I was
+          young. I wanted to make video games, like half the kids that got into programming! When I
+          was around 12, my cousin got me to join him in a game called Graal Online. There, they had
+          player-created worlds you could play on. Both of us being aspiring programmers, we jumped
+          on the opportunity with a few friends we had met while playing, and set out to learn the
+          beginner-friendly language C++.
+        </p>
+        <p className="mt-8 text-xl">
+          {fancyCapitals("D")}espite how awful that may sound, it was fueled by passion and a
+          never-ending hunger to learn. I kept coding for our player world and then a small amount
+          on the main game server once it drew us back with updated graphics and gameplay mechanics
+          the player worlds wouldn&#39;t see. It ended up being boring and we left for a different
+          game.
+        </p>
+        <p className="my-8 text-xl">
+          {fancyCapitals("I")} fell out of love with it while in university, but that spark
+          reignited {getYeOldeDate()} years ago. This time, with quantifiable goals in mind, I studiend and practiced fervently until I was able to get my first freelance gig designing and developing <a href="https://vinceotl.netlify.app" target="_blank">VinceOTL</a> for a Twitch streamer. Since that time, I have continued to push the limits of my knowledge by developing more complex web apps for clients and simply to sate my desire to learn.
+        </p>
+      </article>
     </main>
   );
 }
