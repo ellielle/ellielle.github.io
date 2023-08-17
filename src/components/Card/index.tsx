@@ -1,5 +1,3 @@
-"use client";
-
 import type { Project } from "@/src/models/skillset";
 
 export default function Card({
