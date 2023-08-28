@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         "text-primary-dark": "hsl(0, 0%, 90%)",
         "text-secondary-dark": "hsl(0, 0%, 70%)",
+        "bg-gradient": "radial-gradient(ellipse at bottom, hsl(211, 33%, 16%) 0%, hsl(230, 25%, 5%) 100%)",
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],

@@ -11,6 +11,7 @@ import dynamic from "next/dynamic";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 const Background = dynamic(() => import("@components/Canvas/"));
+import MobileMenu from "@components/MobileMenu";
 import "@assets/styles/globals.css";
 
 export const metadata = {
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
       <body
         className={[inter.className, "max-w-[1280px] sm:mx-[5%] min-[1400px]:mx-auto"].join(" ")}
       >
+        <MobileMenu />
         <Header />
         <div className="sm:opacity-mask">
           {children}
