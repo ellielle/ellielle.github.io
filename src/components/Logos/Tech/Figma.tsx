@@ -8,8 +8,8 @@ export const Figma = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect width="38" height="57" fill="#E5E5E5" />
-      <rect width="90" height="90" transform="translate(-26 -17)" fill="#1E1E1E" />
+      <rect width="38" height="57" fill="#161f2a" />
+      <rect width="90" height="90" transform="translate(-26 -17)" fill="#161f2a" />
       <g clipPath="url(#clip0_0_1)">
         <path
           d="M19 28.5C19 25.9804 20.0009 23.5641 21.7825 21.7825C23.5641 20.0009 25.9804 19 28.5 19C31.0196 19 33.4359 20.0009 35.2175 21.7825C36.9991 23.5641 38 25.9804 38 28.5C38 31.0196 36.9991 33.4359 35.2175 35.2175C33.4359 36.9991 31.0196 38 28.5 38C25.9804 38 23.5641 36.9991 21.7825 35.2175C20.0009 33.4359 19 31.0196 19 28.5Z"
