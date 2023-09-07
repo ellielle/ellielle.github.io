@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Fragment, useState } from "react";
+import { Fragment, useState, useCallback } from "react";
 import Hamburger from "@components/MobileMenu/Hamburger";
 import Modal from "../Modal";
 
@@ -9,10 +9,9 @@ export default function Mobile(): JSX.Element {
   function toggleModal() {
     setIsOpen(!isOpen);
   }
-
-  function createLink(url: string, text: string) {
+  const createLink = useCallback((url: string, text: string) => {
     return (
-      <Fragment>
+      <Fragment key={`${url}-${text}`}>
         <li className="mobile-nav">
           {url.startsWith("/") ? (
             <Link href={url}>{text}</Link>
@@ -25,7 +24,7 @@ export default function Mobile(): JSX.Element {
         <hr className="border-gray-600 w-[70%] self-center" />
       </Fragment>
     );
-  }
+  }, []);
 
   const [isOpen, setIsOpen] = useState(false);
   const navLinks = [
@@ -41,7 +40,7 @@ export default function Mobile(): JSX.Element {
   return (
     <Fragment>
       <Hamburger
-        className="fixed top-4 right-4 transition-all hover:cursor-pointer opacity-70 md:opacity-0 md:disabled"
+        className="fixed top-4 right-4 hover:cursor-pointer opacity-70 md:opacity-0 md:disabled"
         onClickHandler={toggleModal}
       />
       {isOpen && (
