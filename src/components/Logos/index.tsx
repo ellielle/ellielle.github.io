@@ -10,9 +10,7 @@ import { GitHub } from "./Social/GitHub";
 import { Tailwind } from "./Tech/Tailwind";
 import { Jest } from "./Tech/Jest";
 import { Nodejs } from "./Tech/Nodejs";
-import { Figma } from "./Tech/Figma";
-// import { Discord } from "./Social/Discord";
-// import { Twitter } from "./Social/Twitter";
+import { Supabase } from "./Tech/Supabase";
 
 export const techStacks = [
   { Component: TypeScript, url: "https://www.typescriptlang.org/", alt: "TypeScript" },
@@ -23,7 +21,7 @@ export const techStacks = [
   { Component: Next, url: "https://nextjs.org/", alt: "Next" },
   { Component: Jest, url: "https://jestjs.io/", alt: "Jest" },
   { Component: Nodejs, url: "https://nodejs.org/en", alt: "Node.js" },
-  { Component: Figma, url: "https://www.figma.com/", alt: "Figma" },
+  { Component: Supabase, url: "https://supabase.com/", alt: "Supabase" },
   { Component: Vercel, url: "https://vercel.com/", alt: "Vercel" },
 ].map(({ Component, url, alt }, index) => (
   <a
@@ -41,8 +39,6 @@ export const socialMedia = [
   { Component: Email, url: "mailto:noelle.a.lamour@gmail.com", alt: "Email" },
   { Component: LinkedIn, url: "https://www.linkedin.com/in/nlamour/", alt: "LinkedIn" },
   { Component: GitHub, url: "https://github.com/ellielle", alt: "GitHub" },
-  // { Component: Discord, url: "" },
-  // { Component: Twitter, url: "" },
 ].map(({ Component, url, alt }, index) => (
   <a
     href={url}

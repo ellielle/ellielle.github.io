@@ -37,7 +37,9 @@ export default function Page() {
           </div>
         </section>
 
-        <Tech />
+        <section>
+          <Tech />
+        </section>
 
         <section className="text-center text-xl mt-24 pb-12">
           <h2>Some of the things I&#39;ve worked on:</h2>

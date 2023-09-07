@@ -2,7 +2,6 @@ import { nunito, sacramento } from "@utils/load-fonts";
 import { sharedMetadata, robotsMetadata } from "@utils/shared-metadata";
 import type { Metadata } from "next";
 
-// TODO confirm metadata
 export const metadata: Metadata = {
   ...sharedMetadata,
   title: "About",
