@@ -1,5 +1,6 @@
 import { StaticImageData } from "next/image";
 import otl from "@/public/otl.webp";
+import bdb from "@/public/bdb.webp";
 import bchs from "@/public/bchs.webp";
 import gw2 from "@/public/gw2.webp";
 import portfolio from "@/public/nl.webp";
@@ -16,10 +17,19 @@ interface Project {
 
 const projectList: Project[] = [
   {
+    name: "Boot.dev Buddy",
+    description: "An unofficial buddy app to go along with the Boot.dev curriculum.",
+    stack: ["Go", "Svelte", "JavaScript", "Wails"],
+    url: "https://github.com/ellielle/bootdev-buddy",
+    image: bdb,
+    imageAlt: "Boot.dev Buddy",
+    select: true,
+  },
+  {
     name: "GW2 Dark Mode Wiki",
     description: "Enables the built-in dark mode theme without requiring logging in.",
     stack: ["TypeScript", "Vite"],
-    url: "https://addons.mozilla.org/en-US/firefox/addon/gw2-wiki-dark-mode/",
+    url: "https://github.com/ellielle/gw2-wiki-dark",
     image: gw2,
     imageAlt: "GW2 Dark Mode Wiki",
     select: true,
@@ -49,7 +59,7 @@ const projectList: Project[] = [
     url: "https://www.historicberkeley.org/",
     image: bchs,
     imageAlt: "Berkeley County Historical Society's website.",
-    select: false,
+    select: true,
   },
 ];
 

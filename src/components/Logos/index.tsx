@@ -1,28 +1,28 @@
 import { Vue } from "./Tech/Vue";
-import { Next } from "./Tech/Next";
-import { Nuxt } from "./Tech/Nuxt";
+import { CICD } from "./Tech/CICD";
+import { Git } from "./Tech/Git";
 import { React } from "./Tech/React";
-import { Vercel } from "./Tech/Vercel";
+import { Python } from "./Tech/Python";
 import { TypeScript } from "./Tech/TypeScript";
 import { Email } from "./Social/Email";
 import { LinkedIn } from "./Social/LinkedIn";
 import { GitHub } from "./Social/GitHub";
 import { Tailwind } from "./Tech/Tailwind";
-import { Jest } from "./Tech/Jest";
+import { Docker} from "./Tech/Docker";
 import { Nodejs } from "./Tech/Nodejs";
-import { Supabase } from "./Tech/Supabase";
+import { Go } from "./Tech/Go";
 
 export const techStacks = [
+  { Component: Go, url: "https://go.dev/", alt: "Go" },
+  { Component: Python, url: "https://www.python.org/", alt: "Python" },
   { Component: TypeScript, url: "https://www.typescriptlang.org/", alt: "TypeScript" },
   { Component: Vue, url: "https://vuejs.org/", alt: "Vue" },
   { Component: React, url: "https://reactjs.org/", alt: "React" },
   { Component: Tailwind, url: "https://tailwindcss.com/", alt: "Tailwind CSS" },
-  { Component: Nuxt, url: "https://nuxt.com/", alt: "Nuxt" },
-  { Component: Next, url: "https://nextjs.org/", alt: "Next" },
-  { Component: Jest, url: "https://jestjs.io/", alt: "Jest" },
+  { Component: Git, url: "https://www.git-scm.com/", alt: "Git"},
+  { Component: CICD, url: "https://docs.github.com/en/actions", alt: "CICD" },
+    { Component: Docker, url: "https://www.docker.com/", alt: "Docker" },
   { Component: Nodejs, url: "https://nodejs.org/en", alt: "Node.js" },
-  { Component: Supabase, url: "https://supabase.com/", alt: "Supabase" },
-  { Component: Vercel, url: "https://vercel.com/", alt: "Vercel" },
 ].map(({ Component, url, alt }, index) => (
   <a
     href={url}
